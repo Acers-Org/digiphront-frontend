@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDF6F9;
+    padding: 0 200px;
+
+    &__intro {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #006D77;
+    }
+
+    &__title {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 62px;
+        text-align: center;
+        color: #181A1A;
+    }
+
+    &__text {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #798081;
+    }
+
+    &__cta {
+        height: auto;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            height: 56px;
+            outline: none;
+            width: 252px;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__primaryBtn {
+            background-color: #FF5400;
+            border-radius: 100px;
+            border: none;
+            margin-right: 30px;
+            
+            a {
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 20px;
+                color: #fff;
+            }
+        }
+
+        &__secondBtn {
+            border: 1px solid #FF5400;
+            border-radius: 56px;
+            background-color: inherit;
+
+            a {
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                text-align: center;
+                color: #FF5400;
+            }
+        }
+    }
+}
