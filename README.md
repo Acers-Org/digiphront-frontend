@@ -52,7 +52,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Credits
 
 This project is possible as a result of the collaborative work of the members list below:
-* Remilekun  Odegbani
-* Deelite
+* Remilekun  Odegbami
+* Damilola Davis
 * Kotoye Gbemisola
 * Evelyn Anyebe
