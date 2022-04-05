@@ -1,5 +1,6 @@
-import Hero from "../../components/hero/hero";
+import Hero, { Soft } from "../../components/hero/hero";
 import Layout from "../../components/layout/Layout";
+import Works from "../../components/works/Works";
 
 const Landing = () => {
 
@@ -7,6 +8,8 @@ const Landing = () => {
         <div>
             <Layout>
                 <Hero/>
+                <Soft/>
+                <Works/>
             </Layout>
         </div>
     )

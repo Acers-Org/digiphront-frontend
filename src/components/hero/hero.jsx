@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.scss'
+import soft from '../../images/soft.png'
 
 const Hero = () => {
 
@@ -20,3 +21,12 @@ const Hero = () => {
     )
 }
 export default Hero;
+
+export const Soft = () => {
+
+    return (
+        <div className={styles.soft}>
+            <img alt='Soft messaging' src={soft} className={styles.soft__image}/>
+        </div>
+    )
+}
