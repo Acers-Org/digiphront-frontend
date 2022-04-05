@@ -20,6 +20,36 @@ const Works = () => {
                 </div>
             </div>
             <div className={styles.works__bottom}>
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>1</div>
+                    <h2>Measure your performance</h2>
+                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                </div>
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>2</div>
+                    <h2>Custom analytics</h2>
+                    <p>Get a complete sales dashboard in the cloud. See activity, revenue and social metrics all in one place.</p>
+                </div>                
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>3</div>
+                    <h2>Measure your performance</h2>
+                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                </div>                
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>4</div>
+                    <h2>Team performance</h2>
+                    <p>Our calendar lets you know what is happening with customer and projects so you</p>
+                </div>                
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>5</div>
+                    <h2>Measure your performance</h2>
+                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                </div>                
+                <div className={styles.works__bottom__feature}>
+                    <div className={styles.works__bottom__feature__num}>6</div>
+                    <h2>Measure your performance</h2>
+                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                </div>                
 
             </div>
         </div>
