@@ -23,12 +23,3 @@ function App() {
 }
 
 export default App;
-<StudentSignup />} />
-          <Route path='/studentDashboard' element={<StudentDashboard />} />
-        </Routes>
-      </div>
->>>>>>> features/navigation
-  );
-}
-
-export default App;
