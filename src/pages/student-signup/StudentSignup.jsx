@@ -1,6 +1,5 @@
-import React from 'react'
-import loginImg from '../../Media/student-signup.png';
-import Icon from '../../Media/icon.svg'
+import loginImg from '../../assets/student-signup.png';
+import Icon from '../../assets/icon.svg'
 import '../login/Login.css'
 import '../teacher-signup/TeacherSignup.css'
 

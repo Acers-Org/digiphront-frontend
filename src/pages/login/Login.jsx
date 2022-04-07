@@ -1,6 +1,5 @@
-import React from 'react';
-import loginImg from '../../Media/login-img.png';
-import Icon from '../../Media/icon.svg'
+import loginImg from '../../assets/login-img.png';
+import Icon from '../../assets/icon.svg'
 import './Login.css'
 
 function Login() {

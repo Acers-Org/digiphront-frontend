@@ -1,10 +1,7 @@
-import React from 'react'
-import loginImg from '../../Media/teacher-signup.png';
-import Icon from '../../Media/icon.svg'
+import loginImg from '../../assets/teacher-signup.png';
+import Icon from '../../assets/icon.svg'
 import '../login/Login.css'
 import './TeacherSignup.css'
-// import { useState } from 'react/cjs/react.production.min';
-
 
 function TeacherSignup() {
 

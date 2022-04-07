@@ -1,6 +1,6 @@
 import './Sidebar.css';
 import { SidebarData } from './SidebarData';
-import logo from '../../Media/logo.svg'
+import logo from '../../assets/logo.svg'
 
 
 function Sidebar() {
