@@ -1,5 +1,5 @@
 import Hero, { Soft } from "../../components/hero/hero";
-import Layout from "../../components/layout/Layout";
+import Layout from "../../layout/Layout";
 import Pricing from "../../components/pricing/Pricing";
 import Works from "../../components/works/Works";
 
@@ -16,4 +16,4 @@ const Landing = () => {
         </div>
     )
 }
-export default Landing;
+export default Landing;lt Landing;

@@ -1,7 +1,7 @@
 import styles from './Pricing.module.scss'
 import { BsArrowRight } from 'react-icons/bs'
 import { RiSkullLine } from 'react-icons/ri'
-import rocket from '../../images/rocket.png'
+import rocket from '../../assets/rocket.png'
 
 const Pricing = () => {
 

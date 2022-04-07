@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.scss'
-import soft from '../../images/soft.png'
+import soft from '../../assets/soft.png'
 
 const Hero = () => {
 
