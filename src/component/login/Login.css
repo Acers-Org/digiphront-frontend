@@ -1,0 +1,103 @@
+
+
+.login .login-img {
+    height: 100vh;
+}
+
+.login {
+    background-color: #CCE2E4;
+}
+
+.login label {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #699E98;
+    margin-bottom: 10px;
+}
+
+.login .btn {
+    background: #FF5400;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    margin-bottom: 50px;
+} 
+
+.login input, .login select {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    margin-bottom: 20px;
+}
+
+.checkbox input {
+    background: #CDE8E5;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.checkbox label, .login a {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #001618;
+    text-decoration: none;
+    padding-left: 5px;
+    margin-top: -30px;
+}
+
+
+.img-container {
+    position: relative;
+    text-align: center;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-text h1 {
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px;
+}
+
+.img-text img {
+    margin-bottom: 15px;
+    margin-left: 30%;
+}
+
+.img-text .edu {
+    color: #1d1c1c;
+}
+
+.img-text .clan {
+    color: #FF5400;
+}
+
+@media (max-width: 480px) {
+    .login .img-container {
+        display: none;
+    }
+
+    .login {
+        height: 100vh;
+    }
+
+    .login form {
+        padding-top: 70%;
+    }
+}

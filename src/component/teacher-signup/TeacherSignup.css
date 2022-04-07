@@ -1,0 +1,13 @@
+h1 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 20px;
+    color: #1A2726;
+    padding-bottom: 40px;
+}
+
+.login .span {
+    color: #004147;
+}
