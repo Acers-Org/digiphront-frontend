@@ -5,10 +5,9 @@
 
 
 .sidebar {
-    height: 100%;
     width: 250px;
     background-color: var(--background);
-    width: 33.2vh;
+    /* width: 33.2vh; */
     height:100vh;
     position: absolute;
   }
@@ -23,6 +22,7 @@
     font-size: 18px;
     line-height: 30px;
     cursor: pointer;
+    text-align: left;
 }
 
 .sidebar .list-item:nth-child(1) {
