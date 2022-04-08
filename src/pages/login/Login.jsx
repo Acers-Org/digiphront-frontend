@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Login() {
   return (
     <section className='login'>
-            <div className="row d-flex justify-content-center">
+            <div className="row d-flex justify-content-center login">
                 <div className="col-md-6 col-sm-12 img-container">
                     <img src={loginImg} alt="Login" className='img-fluid login-img'/>
                     <div className="img-text row">
