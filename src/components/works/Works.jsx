@@ -10,7 +10,7 @@ const Works = () => {
             <div className={styles.works__top}>
                 <div className={styles.works__top__info}>
                     <h2 className={styles.works__top__info__title}>Gain more insight into how people use our product</h2>
-                    <p className={styles.works__top__info__text}>With our integrated CRM, project management, collaboration and invoicing capabilities, you can manage your business in one secure platform.</p>
+                    <p className={styles.works__top__info__text}>With EduClan you can manage your school activities from anywhere in the world and effectively teach students regardless of their location.</p>
                 </div>
                 <div className={styles.works__top__imageBg}>
                     <div className={styles.works__top__imageBg__pic}>
@@ -23,33 +23,33 @@ const Works = () => {
             <div className={styles.works__bottom}>
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>1</div>
-                    <h2>Measure your performance</h2>
-                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                    <h2>Improve Staff Productivity</h2>
+                    <p>With EduClan your staff can focus on teaching and manage students effectively</p>
                 </div>
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>2</div>
-                    <h2>Custom analytics</h2>
-                    <p>Get a complete sales dashboard in the cloud. See activity, revenue and social metrics all in one place.</p>
+                    <h2>Dashboard Analytics</h2>
+                    <p>View the details of your school at a glance.</p>
                 </div>                
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>3</div>
-                    <h2>Measure your performance</h2>
-                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                    <h2>Resource Management</h2>
+                    <p>Store, Edit and share school documents and resources seamlessly</p>
                 </div>                
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>4</div>
-                    <h2>Team performance</h2>
-                    <p>Our calendar lets you know what is happening with customer and projects so you</p>
+                    <h2>User-friendly Interface</h2>
+                    <p>Easy to navigate</p>
                 </div>                
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>5</div>
-                    <h2>Measure your performance</h2>
-                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                    <h2>Affrodable Pricing</h2>
+                    <p>We offer different pricing packages suited to your needs and pocket.</p>
                 </div>                
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>6</div>
-                    <h2>Measure your performance</h2>
-                    <p>Stay connected with your team and make quick decisions wherever you are.</p>
+                    <h2>Product Support</h2>
+                    <p>We offer product support to customers even after installation.</p>
                 </div>                
 
             </div>

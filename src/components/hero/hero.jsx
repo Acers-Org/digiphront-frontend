@@ -10,9 +10,9 @@ const Hero = () => {
             <h1 className={styles.wrap__title}>Manage your Teaching and Learning activities all in one place</h1>
             <p className={styles.wrap__text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic et, voluptates totam modi tempora nobis fugiat molestiae eos illo doloremque ducimus magni mollitia explicabo aspernatur velit vitae sed rem eius!</p>
             <div className={styles.wrap__cta}>
-                <button className={styles.wrap__cta__primaryBtn}>
+                {/* <button className={styles.wrap__cta__primaryBtn}>
                     <Link to='/'>Get started for Free</Link>
-                </button>
+                </button> */}
                 <button className={styles.wrap__cta__secondBtn}>
                     <Link to='/'>Request a Demo</Link>
                 </button>

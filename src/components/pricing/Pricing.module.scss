@@ -1,12 +1,24 @@
 .price {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 400px);
     display: flex;
-    //flex-direction: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #EDF6F9;
+    border-top: 2px solid #EDF6F9;
+    border-radius: 50%/0 100px 0 100px;
 
+    h1 {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 62px;
+        text-align: center;
+        font-feature-settings: 'liga' off;
+        color: #002C30;
+    }
     &__cards {
         width: 100%;
         height: auto;
@@ -16,12 +28,23 @@
         justify-content: space-around;
         padding: 20px 80px;
 
+        &__active1 {
+            width: 359.63px;
+            height: 590.48px;
+            background: #FF5400;
+            border-radius: 16.4815px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 600ms ease;
+        }
+
         &__cardR {
             width: 329.63px;
             height: 550.48px;
             background: #FF5400;
             border-radius: 16.4815px;
-            padding: 5px 20px;
+            padding: 10px 20px;
+            cursor: pointer;
 
             &__title {
                 font-family: 'Inter';
@@ -34,6 +57,24 @@
 
                 span {
                     font-weight: bold;
+                }
+            }
+
+            &__cta {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: left;
+
+                p {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 20px;
+                    color: #FFFFFF;
                 }
             }
 
@@ -67,12 +108,57 @@
             }
         }
 
+        &__active {
+            width: 359.63px;
+            height: 590.48px;
+            background: #FFFFFF;
+            border-radius: 16.4815px;
+            padding: 5px 20px;
+            cursor: pointer;
+            transition: all 600ms ease;
+
+            button {
+                width: 290.07px;
+                height: 52.74px;
+                background: #FF5400;
+                border-radius: 9.88889px;
+                border: none;
+                outline: none;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18.1296px;
+                line-height: 33px;
+                text-align: center;
+                color: #FFFFFF;
+                position: relative;
+                top: 80px;
+            }
+            h2 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 26.3704px;
+                line-height: 33px;
+                color: #0B0914;
+                position: relative;
+                top: 70px;
+                left: -50px;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
         &__card {
             width: 329.63px;
             height: 550.48px;
             background: #FFFFFF;
             border-radius: 16.4815px;
             padding: 5px 20px;
+            cursor: pointer;
 
             &__topic {
                 width: 50%;
@@ -81,6 +167,8 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: left;
+                position: relative;
+                top: 15px;
 
                 h1 {
                     font-family: 'Inter';
@@ -91,11 +179,109 @@
                     color: #0B0914;
                     position: relative;
                     right: -20px;
+                    padding-bottom: 0;
                 }
 
                 &__icon {
                     width: 32.96px;
                     height: 32.96px;
+                }
+            }
+
+            &__title {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18.1296px;
+                line-height: 22px;
+                color: #A9A9AA;
+                position: relative;
+                left: -60px;
+                top: 20px;
+            }
+
+            &__items {
+                width: 263.7px;
+                height: 256.59px;
+                position: relative;
+                top: 20px;
+
+                &__div {
+                    width: 263.7px;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: left;
+                    position: relative;
+                    top: 20px;
+                    left: 5px;
+
+                    &__item {
+                        width: 263.7px;
+                        height: 36px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: left;
+                        margin-bottom: 10px;
+
+                        &__icon {
+                            width: 19.78px;
+                            height: 19.78px;
+                        }
+
+                        span {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14.8333px;
+                            line-height: 18px;
+                            color: #35353F;
+                            position: relative;
+                            right: -15px;
+                        }
+                    }
+                }
+            }
+            &__divider {
+                width: 263.7px;
+                height: 0px;
+                border: 0.824074px dashed #A9A9AA;
+                position: relative;
+                top: 40px;
+            }
+            button {
+                width: 290.07px;
+                height: 52.74px;
+                background: #FF5400;
+                border-radius: 9.88889px;
+                border: none;
+                outline: none;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18.1296px;
+                line-height: 33px;
+                text-align: center;
+                color: #FFFFFF;
+                position: relative;
+                top: 80px;
+            }
+            h2 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 26.3704px;
+                line-height: 33px;
+                color: #0B0914;
+                position: relative;
+                top: 70px;
+                left: -50px;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
                 }
             }
         }

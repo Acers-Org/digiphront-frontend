@@ -1,12 +1,8 @@
-import Sidebar from '../components/sidebar/Sidebar';
+//import Sidebar from '../components/sidebar/Sidebar';
 
-const DashboardLayout = ({children}) => {
+const DashboardLayout = () => {
   
-  return (
-    <Sidebar>
-      {children}
-    </Sidebar>
-    )
+  return 
 }
 
 export default DashboardLayout;

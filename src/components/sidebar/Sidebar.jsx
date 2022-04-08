@@ -5,17 +5,17 @@ import { useEffect, useState } from 'react';
 
 
 function Sidebar() {
-    const USER = localStorage.getItem('user')
-    const users = ['Teacher, Student, Admin'];
+    const USER = JSON.parse(localStorage.getItem('user'))
+    const users = ['Teacher', 'Student', 'Admin'];
     const [user, setUser] = useState()
 
     useEffect(()=>{
-        setUser(USER);
+        setUser(USER.user);
     }, [USER])
   return (
     <div className='sidebar'>
         <img src={logo} alt="logo" />
-        <ul className= 'sidebar-list'>
+        <ul className='sidebar-list list'>
             {user === users[0] ? (TeacherSideBar.map((val, key) => {
                 return (
                     <li 

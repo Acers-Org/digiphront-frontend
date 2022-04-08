@@ -12,6 +12,8 @@
     /* width: 33.2vh; */
     height:100vh;
     position: absolute;
+    left: 0;
+    top: 0;
   }
 
 .sidebar .list-item {
@@ -26,8 +28,9 @@
     cursor: pointer;
     text-align: left;
 }
-.sdebar-list {
-    height: calc(100vh - 50px);
+.list {
+    height: calc(100vh - 100px);
+    margin-left: 20px;
 }
 .sidebar .list-item:nth-child(1) {
     color: var(--color);
@@ -41,4 +44,5 @@
 .sidebar img {
     margin-left: 10px;
     margin-top: 20px;
+    margin-bottom: 40px;
 }

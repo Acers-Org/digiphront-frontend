@@ -1,10 +1,10 @@
-import DashboardLayout from '../../layout/DashboardLayout'
+import Sidebar from '../../components/sidebar/Sidebar';
 
 function StudentDashboard() {
   return (
-    <DashboardLayout>
-      <div>StudentDashboard</div>
-    </DashboardLayout>
+    <div>
+      <Sidebar/>
+    </div>
   )
 }
 
