@@ -2,7 +2,9 @@
     --background: #E6F3F2;
     --color: #FF7633;
 }
-
+* {
+    box-sizing: border-box;
+}
 
 .sidebar {
     width: 250px;
@@ -13,7 +15,7 @@
   }
 
 .sidebar .list-item {
-    padding: 20px;
+    padding: 10px;
     list-style-type: none;
     color: #000000;
     font-family: 'Ubuntu';
@@ -24,7 +26,9 @@
     cursor: pointer;
     text-align: left;
 }
-
+.sdebar-list {
+    height: calc(100vh - 50px);
+}
 .sidebar .list-item:nth-child(1) {
     color: var(--color);
 }

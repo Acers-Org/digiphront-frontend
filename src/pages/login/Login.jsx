@@ -1,9 +1,36 @@
 import loginImg from '../../assets/login-img.png';
 import Icon from '../../assets/icon.svg'
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { Spinner } from 'react-bootstrap';
+import * as Yup from 'yup';
 
 function Login() {
+    const navigate = useNavigate();
+    const validationSchema = Yup.object().shape({
+        email: Yup.string().email('Email is not valid').required('An email address is required'),
+        password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
+        remember: Yup.string()
+    })
+    const handleSignin = (values) => {
+        if(values) {
+            localStorage.setItem('user', JSON.stringify(values));
+            console.log(values)
+            navigate('/studentDashboard');
+        };
+    }    
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+            remember: '',
+            user: 'Teacher',
+        },
+        onSubmit: handleSignin,
+        validationSchema,
+    })
+
   return (
     <section className='login'>
             <div className="row d-flex justify-content-center login">
@@ -15,20 +42,42 @@ function Login() {
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12 m-auto">
-                    <form action="" className=' form w-75'>
+                    <form action="" className='form w-75' onSubmit={formik.handleSubmit}>
                         <div className='d-flex flex-column'>
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" required />
+                            <input type="email" 
+                            name="email" 
+                            id="email" 
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            />
+                            {formik.errors.email && formik.touched.email ? (
+                                <span className='error'>{formik.errors.email}</span>
+                            ) : null}
                         </div>
                         <div className="d-flex flex-column">
-                                <label htmlFor="password">Password</label>
-                                <input type="password" name="password" id="password" required />
+                            <label htmlFor="password">Password</label>
+                            <input type="password" 
+                            name="password" 
+                            id="password"
+                            value={formik.values.password}
+                            onChange={formik.handleChange}
+                            />
+                            {formik.errors.password && formik.touched.password ? (
+                            <span className='error'>{formik.errors.password}</span>
+                            ) : null}
                         </div>
-                        <button className="btn text-uppercase btn-block btn-primary w-100 mt-3">sign up</button>
+                        <button className="btn text-uppercase btn-block btn-primary w-100 mt-3" type='submit' disabled={formik.isSubmitting} >
+                            {!formik.isSubmitting ? ("Sign Up") : (<Spinner animation="border" variant="light"/>)}
+                        </button>
 
                         <div className="d-flex justify-content-between mt-3">
                             <div className="checkbox">
-                                <input type="checkbox" name="rememberMe" id="rememberMe" value='rememberMe' />
+                                <input type="checkbox" 
+                                name="rememberMe" 
+                                id="rememberMe" 
+                                value={formik.values.remember}
+                                onChange={formik.handleChange} />
                                 <label htmlFor="rememberMe"> Remember me</label>
                             </div>
                             <h5> <Link to="/" className='text-capitalize'> Forgot password?</Link> </h5>

@@ -1,17 +1,22 @@
 import './Sidebar.css';
 import { SidebarData, TeacherSideBar } from './SidebarData';
 import logo from '../../assets/logo.svg'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function Sidebar() {
-  const [user, setUser] = useState('Student')
+    const USER = localStorage.getItem('user')
+    const users = ['Teacher, Student, Admin'];
+    const [user, setUser] = useState()
 
+    useEffect(()=>{
+        setUser(USER);
+    }, [USER])
   return (
     <div className='sidebar'>
         <img src={logo} alt="logo" />
         <ul className= 'sidebar-list'>
-            {user === 'Teacher' ? (TeacherSideBar.map((val, key) => {
+            {user === users[0] ? (TeacherSideBar.map((val, key) => {
                 return (
                     <li 
                         className='list-item'

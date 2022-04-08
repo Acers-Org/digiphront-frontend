@@ -31,7 +31,16 @@
     border: 2px solid transparent;
     margin-bottom: 50px;
 } 
-
+.login input {
+    height: 44px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    padding: 20px;
+}
 .login input, .login select {
     background: #FFFFFF;
     border-radius: 10px;
@@ -39,7 +48,9 @@
     outline: 2px solid transparent;
     margin-bottom: 20px;
 }
-
+label {
+    text-align: left;
+}
 .checkbox input {
     background: #CDE8E5;
     border: 1px solid #000000;
@@ -94,7 +105,14 @@
 .img-text .clan {
     color: #FF5400;
 }
-
+.error {
+    color: red;
+    width: 100%;
+    position: relative;
+    top: -80px;
+    left: 0px;
+    text-align: left;
+}
 @media (max-width: 480px) {
     .login .img-container {
         display: none;
