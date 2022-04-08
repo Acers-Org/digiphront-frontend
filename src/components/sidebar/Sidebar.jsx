@@ -12,7 +12,7 @@ function Sidebar() {
                 return (
                     <li 
                         className='list-item'
-                        id={window.location.pathname == val.link ? 'active': ''}
+                        id={window.location.pathname === val.link ? 'active': ''}
                         key={key} 
                         onClick={() => {window.location.pathname = val.link}}>
                     

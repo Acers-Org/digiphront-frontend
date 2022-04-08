@@ -1,20 +1,20 @@
 import loginImg from '../../assets/login-img.png';
 import Icon from '../../assets/icon.svg'
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 function Login() {
   return (
     <section className='login'>
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-md-6 col-sm-12 img-container">
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-6 col-sm-12 img-container">
                     <img src={loginImg} alt="Login" className='img-fluid login-img'/>
                     <div className="img-text row">
                         <img src={Icon} alt="EduClan Icon" className='img-fluid w-25' />
                         <h1 className='text-white'>Welcome to <span className='edu'>Edu</span><span className='clan'>Clan</span> </h1>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 m-auto">
+                <div className="col-md-6 col-sm-12 m-auto">
                     <form action="" className=' form w-75'>
                         <div className='d-flex flex-column'>
                             <label htmlFor="email">Email</label>
@@ -31,12 +31,11 @@ function Login() {
                                 <input type="checkbox" name="rememberMe" id="rememberMe" value='rememberMe' />
                                 <label htmlFor="rememberMe"> Remember me</label>
                             </div>
-                            <h5> <a href="#" className='text-capitalize'> Forgot password?</a> </h5>
+                            <h5> <Link to="/" className='text-capitalize'> Forgot password?</Link> </h5>
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>        
+            </div>        
     </section>
   )
 }

@@ -2,6 +2,7 @@ import loginImg from '../../assets/student-signup.png';
 import Icon from '../../assets/icon.svg'
 import '../login/Login.css'
 import '../teacher-signup/TeacherSignup.css'
+import { Link } from 'react-router-dom';
 
 function StudentSignup() {
   return (
@@ -9,7 +10,7 @@ function StudentSignup() {
             <div class="container-fluid">
                 <div class="row d-flex justify-content-between">
                     <div class="col-md-6 col-sm-12 img-container">
-                        <img src={loginImg} alt="Login" className='img-fluid login-img'/>
+                        <img src={loginImg} alt="Login" className='img-fluid login-img pad'/>
                         <div className="img-text row">
                             <img src={Icon} alt="EduClan Icon" className='img-fluid w-25' />
                             <h2 className='text-white'>Welcome to <span className='edu'>Edu</span><span className='clan'>Clan</span> </h2>
@@ -81,7 +82,7 @@ function StudentSignup() {
                                     <input type="checkbox" name="rememberMe" id="rememberMe" value='rememberMe' />
                                     <label htmlFor="rememberMe"> Remember me</label>
                                 </div>
-                                <h5> <a href="#"> Already have an account? <span className='span'>Sign in</span></a> </h5>
+                                <h5> <Link to="/login"> Already have an account? <span className='span'>Sign in</span></Link> </h5>
                             </div>
                         </form>
                     </div>

@@ -11,3 +11,7 @@ h1 {
 .login .span {
     color: #004147;
 }
+.pad {
+    position: relative;
+    left: -12px;
+}
