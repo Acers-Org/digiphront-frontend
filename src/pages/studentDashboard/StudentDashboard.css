@@ -1,0 +1,87 @@
+.student-dashboard {
+    background-color: antiquewhite;
+}
+
+.progress-cards {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+.progress-cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container .progress-cards {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.progress {
+    background-color: grey;
+    height: 15px;
+    width: 75%;    
+    border-radius: "50px";
+}
+
+.welcome-section {
+    background: #E4E6E6;
+    border-radius: 18px;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+.welcome-section .header {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 62px;
+    color: #001618;
+}
+
+.welcome-section .welcome-text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #4F7672;
+}
+
+.progress-cards .card {
+    border-radius: 27px 27px 0 0;
+        background: #FFFFFF;
+    /* edu shadow */
+
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 27px;
+}
+
+.progress-cards .card-header {
+    border-radius: 27px 27px 0px 0px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 30px;
+    color: #002C30;
+    background: #B5DCD8;
+}
+
+
+.progress-cards .card-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #002C30;
+}
+
+.progress-cards .card-info .position {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #CCE2E4;
+}
+
+.progress-cards .card-info .name, .progress-cards .card-info .done {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF5400;
+}

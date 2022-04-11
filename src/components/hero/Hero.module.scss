@@ -26,7 +26,7 @@ $color: #006D77;
         text-align: center;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: $colo;
+        color: $color;
     }
 
     &__title {
@@ -72,6 +72,8 @@ $color: #006D77;
             border-radius: 100px;
             border: none;
             margin-right: 30px;
+            white-space: nowrap;
+            padding: 15px;
             
             a {
                 font-family: 'Ubuntu';
@@ -87,7 +89,7 @@ $color: #006D77;
             border: 1px solid #FF5400;
             border-radius: 56px;
             background-color: inherit;
-
+            
             a {
                 font-family: 'Ubuntu';
                 font-style: normal;
@@ -95,6 +97,8 @@ $color: #006D77;
                 line-height: 20px;
                 text-align: center;
                 color: #FF5400;
+                white-space: nowrap;
+                padding: 15px;
             }
         }
     }
