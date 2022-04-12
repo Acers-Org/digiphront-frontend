@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
-import axios from 'axios';
+
 
 function Login() {
     const navigate = useNavigate();
@@ -16,31 +16,11 @@ function Login() {
         remember: Yup.string()
     })
     const handleSignin = async (values) => {
-        console.log(values)
-        //const res = await axios.post('https://educlan.herokuapp.com/api/login', values)
-        //console.log(res)
-        //.catch(err => console.log(err))
-        await API.post(`/login`, values)
-        .then((res) => console.log(res))
-        .catch(err => console.log(err))
-
         try {
-            // await axios.post('https://educlan.herokuapp.com/api/login', values)
-            // .then((res) => console.log(res))
-            // .catch(err => console.log(err))
-            // await API.post('/login', values)
-            // .then((res) => console.log(res))
-            // .catch(err => console.log(err))
-
-            fetch(`https://educlan.herokuapp.com/api/login`, {
-                method: 'POST',
-                body: values,
-                headers: {
-                    "Content-type": "application/json"
-                }
-            })
-            .then((res) => console.log(res))
-            .catch(err => console.log(err))
+        console.log(values)
+        const res = await API.post('/login', values)
+        console.log(res)
+        
         } catch (e) {
             console.log('API error: ', e)
         }
