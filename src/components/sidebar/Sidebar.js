@@ -7,12 +7,12 @@ function Sidebar() {
   return (
     <div className='sidebar'>
         <img src={logo} alt="logo" />
-        <ul className= 'sidebar-list'>
+        <ul className='sidebar-list'>
             {SidebarData.map((val, key) => {
                 return (
                     <li 
                         className='list-item'
-                        id={window.location.pathname == val.link ? 'active': ''}
+                        id={window.location.pathname === val.link ? 'active': ''}
                         key={key} 
                         onClick={() => {window.location.pathname = val.link}}>
                     
