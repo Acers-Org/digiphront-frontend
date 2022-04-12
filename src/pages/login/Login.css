@@ -51,12 +51,22 @@
 label {
     text-align: left;
 }
+.checkbox {
+    width: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
 .checkbox input {
     background: #CDE8E5;
     border: 1px solid #000000;
     box-sizing: border-box;
 }
-
+.checkbox label {
+    position: relative;
+    top: 10px;
+}
 .checkbox label, .login a {
     font-family: 'Ubuntu';
     font-style: normal;
@@ -109,9 +119,12 @@ label {
     color: red;
     width: 100%;
     position: relative;
-    top: -80px;
+    top: -100px;
     left: 0px;
     text-align: left;
+}
+.align {
+    align-items: center;
 }
 @media (max-width: 480px) {
     .login .img-container {

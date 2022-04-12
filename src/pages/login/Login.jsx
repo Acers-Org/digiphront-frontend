@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
+import API from '../../utils/Backend'
+import axios from 'axios';
 
 function Login() {
     const navigate = useNavigate();
@@ -13,12 +15,35 @@ function Login() {
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
         remember: Yup.string()
     })
-    const handleSignin = (values) => {
-        if(values) {
-            localStorage.setItem('user', JSON.stringify(values));
-            console.log(values)
-            navigate('/studentDashboard');
-        };
+    const handleSignin = async (values) => {
+        console.log(values)
+        //const res = await axios.post('https://educlan.herokuapp.com/api/login', values)
+        //console.log(res)
+        //.catch(err => console.log(err))
+        await API.post(`/login`, values)
+        .then((res) => console.log(res))
+        .catch(err => console.log(err))
+
+        try {
+            // await axios.post('https://educlan.herokuapp.com/api/login', values)
+            // .then((res) => console.log(res))
+            // .catch(err => console.log(err))
+            // await API.post('/login', values)
+            // .then((res) => console.log(res))
+            // .catch(err => console.log(err))
+
+            fetch(`https://educlan.herokuapp.com/api/login`, {
+                method: 'POST',
+                body: values,
+                headers: {
+                    "Content-type": "application/json"
+                }
+            })
+            .then((res) => console.log(res))
+            .catch(err => console.log(err))
+        } catch (e) {
+            console.log('API error: ', e)
+        }
     }    
     const formik = useFormik({
         initialValues: {
@@ -71,7 +96,7 @@ function Login() {
                             {!formik.isSubmitting ? ("Sign Up") : (<Spinner animation="border" variant="light"/>)}
                         </button>
 
-                        <div className="d-flex justify-content-between mt-3">
+                        <div className="d-flex justify-content-between mt-3 align">
                             <div className="checkbox">
                                 <input type="checkbox" 
                                 name="rememberMe" 
