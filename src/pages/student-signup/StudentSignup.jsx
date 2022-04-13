@@ -16,7 +16,7 @@ function StudentSignup() {
                             <h2 className='text-white'>Welcome to <span className='edu'>Edu</span><span className='clan'>Clan</span> </h2>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12 m-auto">
+                    <div className="col-md-6 col-sm-12 m-auto">
                         <form action="" className=' form w-75'>
                             <h1 className="text-center">Create Account</h1>
 
@@ -77,7 +77,7 @@ function StudentSignup() {
                            
                             <button className="btn text-uppercase btn-block btn-primary w-100 mt-3">sign up</button>
     
-                            <div className="d-flex justify-content-between mt-3">
+                            <div className="sign-in-options d-flex justify-content-between mt-3">
                                 <div className="checkbox">
                                     <input type="checkbox" name="rememberMe" id="rememberMe" value='rememberMe' />
                                     <label htmlFor="rememberMe"> Remember me</label>
