@@ -6,29 +6,45 @@ import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
+//import { useState, useEffect } from 'react';
+//import useContextGetter from "../../hooks/useContextGetter";
+import AppContext from '../../store/appContext';
 
 function Login() {
+    //const login = useContextGetter();
+    const login = AppContext.Consumer;
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
-        remember: Yup.string()
+        rememberMe: Yup.string()
     })
     const handleSignin = async (values) => {
         try {
-            console.log(values)
             const res = await API.post('/login', values)
-            console.log(res)
+            console.log(res.data.data)
+            console.log(res.data.message)
+            console.log(res.data.success)
+            if (res.data.success === 1) {
+                localStorage.setItem('token', res.data.data.token)
+                localStorage.setItem('user', JSON.stringify(res.data.data.user))
+                navigate('/studentDashboard')
+                login(res.data.data)
+            }
             
         } catch (e) {
-            console.log('API error: ', e)
+            if (e.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                console.log(e.response.data);
+                console.log(e.response.status);
+            }
         }
     }    
     const formik = useFormik({
         initialValues: {
             email: '',
             password: '',
-            remember: '',
             user: 'Teacher',
         },
         onSubmit: handleSignin,
@@ -80,7 +96,7 @@ function Login() {
                                 <input type="checkbox" 
                                 name="rememberMe" 
                                 id="rememberMe" 
-                                value={formik.values.remember}
+                                value={formik.values.rememberMe}
                                 onChange={formik.handleChange} />
                                 <label htmlFor="rememberMe"> Remember me</label>
                             </div>

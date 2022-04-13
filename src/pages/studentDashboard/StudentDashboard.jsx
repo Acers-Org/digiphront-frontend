@@ -3,7 +3,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 function StudentDashboard() {
   return (
     <div>
-      <Sidebar/>
+      {/* <Sidebar/> */}
     </div>
   )
 }
