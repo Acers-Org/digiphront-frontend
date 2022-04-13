@@ -1,20 +1,15 @@
-import { useNavigate, useLocation, Navigate} from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import useContextGetter from "../hooks/useContextGetter";
 //import { NoAuthURL } from '../store/NoAuthURL';
 
-function ProtectedRoute() {
+function ProtectedRoute({ children }) {
     const auth = useContextGetter();
     const isAuth = auth.isAuth;
     const token = auth.user.token;
-    //const navigate = useNavigate();
-    //const location = useLocation();
-    //const path = location.pathname.split('/');
-    
-  return (
-    <div>
-        {!isAuth && !token ? (<Navigate to='/login') : (<Navigate to='/')}
-    </div>
-  );
+    if (!(isAuth && token)) {
+      <Navigate to='/login'/>
+    }
+  return children
 }
 
 export default ProtectedRoute;
