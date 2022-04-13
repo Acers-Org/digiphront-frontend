@@ -9,7 +9,7 @@ const initialState = {
     user:{}
 };
 
-const AppState = (props) => {
+const AppState = ({ children }) => {
     const [state, dispatch] = useReducer(appReducer, initialState);
 
     const login = (user) => {
@@ -34,7 +34,7 @@ const AppState = (props) => {
 
     return (
         <AppContext.Provider value={{ ...state, login, logout, setIsAuth }}>
-            {props.children}
+            {children}
         </AppContext.Provider>
     )
 }

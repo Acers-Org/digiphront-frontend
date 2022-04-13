@@ -1,19 +1,19 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { NoAuthURL } from '../store/NoAuthURL';
+import useContextGetter from "../hooks/useContextGetter";
+//import { NoAuthURL } from '../store/NoAuthURL';
 
-function ProtectedRoute({ children, routePath, ...rest }) {
-  const token = localStorage.getItem("token");
-  const user = localStorage.getItem('user');
-  //const { location: {pathname} } = useHistory();
-  const navigate = useNavigate()
-  //const pathnameTree=pathname.split('/');
+function ProtectedRoute({ Component, routePath, ...rest }) {
+    const auth = useContextGetter();
+    const isAuth = auth.isAuth;
+    const token = auth.user.token;
+    const navigate = useNavigate()
 
   return (
     <div>
         <Routes>
-        {token && user ? (
-        <Route {...rest} path={routePath} element={children}/>) 
-        :(NoAuthURL.includes(`/`)) ? navigate() : navigate('/')}
+        {isAuth && token ? (
+        <Route {...rest} path={routePath} element={<Component/>}/>) 
+        : navigate('/login')}
         </Routes>
     </div>
   );

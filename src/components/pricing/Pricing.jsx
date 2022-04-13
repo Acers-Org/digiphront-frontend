@@ -1,9 +1,10 @@
 import styles from './Pricing.module.scss'
 import { BsArrowRight } from 'react-icons/bs'
-import { RiSkullLine } from 'react-icons/ri'
 import { HiCheckCircle } from 'react-icons/hi'
 import rocket from '../../assets/rocket.png'
 import { useState } from 'react'
+import gold from '../../assets/gold.png'
+import silver from '../../assets/silver.png'
 
 const Pricing = () => {
     const [plan, setPlan] = useState('Basic')
@@ -29,7 +30,7 @@ const Pricing = () => {
                 </div>
                 <div className={plan === 'Basic' ? styles.price__cards__active : styles.price__cards__card} onMouseOver={()=>{setPlan('Basic')}}>
                     <div className={styles.price__cards__card__topic}>
-                        <RiSkullLine className={styles.price__cards__card__topic__icon}/>
+                        <img src={silver} alt='Silver' className={styles.price__cards__card__topic__icon}/>
                         <h1>Basic</h1>
                     </div>
                     <div className={styles.price__cards__card__items}>
@@ -56,7 +57,7 @@ const Pricing = () => {
                 </div>
                 <div className={plan === 'Premium' ? styles.price__cards__active : styles.price__cards__card} onMouseOver={()=>{setPlan('Premium')}}>
                     <div className={styles.price__cards__card__topic}>
-                        <RiSkullLine className={styles.price__cards__card__topic__icon}/>
+                        <img src={gold} alt='Gold' className={styles.price__cards__card__topic__icon}/>
                         <h1>Premium</h1>
                     </div>
                     <div className={styles.price__cards__card__items}>

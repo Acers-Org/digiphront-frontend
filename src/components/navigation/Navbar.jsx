@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Logo } from '../logo/logo';
 import styles from './Navbar.module.scss'
+import style from '../hero/Hero.module.scss'
 
 const Navbar = () => {
 
@@ -23,6 +24,11 @@ const Navbar = () => {
                     </li>
                     <li className={styles.wrapper__navbar__links__link}>
                         <Link to='/'>Contact us</Link>
+                    </li>
+                    <li>
+                        <button className={style.wrap__cta__menuBtn}>
+                            <Link to='/'>Request a Demo</Link>
+                        </button>
                     </li>
                 </ul>
             </nav>

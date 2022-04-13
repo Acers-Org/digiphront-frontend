@@ -1,12 +1,10 @@
-import { useContext } from 'react';
-import AppContext  from '../store/appContext';
+import useContextGetter from './useContextGetter';
 
 const useLoggin = () => {
-    const {login1, isAuth1} = useContext(AppContext);
-    const {login, isAuth } = AppContext.Consumer
-    console.log(login)
-    const isLoggedIn = localStorage.getItem("isAuth");
-    if(!isAuth && isLoggedIn){
+    const auth = useContextGetter()
+    const isAuth = auth.isAuth;
+    const token = auth.user.token
+    if(!isAuth && token){
         const user = JSON.parse(localStorage.getItem("user"));
         login(user);
     }

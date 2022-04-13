@@ -1,19 +1,21 @@
 import './Sidebar.css';
 import { SidebarData, TeacherSideBar, AdminSideBar } from './SidebarData';
 import logo from '../../assets/logo.svg'
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import useContextGetter from '../../hooks/useContextGetter';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Sidebar() {
-    const USER = localStorage.getItem('user')
+    let location = useLocation()
+    const auth = useContextGetter();
+    const USER = auth.user;
     const [user, setUser] = useState({admin: {}, student: {}, teacher: {}})
-
+    
     useEffect(()=>{
-        setUser({...user, 
-            admin: USER.admin,
-            student: USER.student,
-            teacher: USER.teacher});
-    }, [USER, user])
+        setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});
+    }, [user, USER.user.admin, USER.user.student, USER.user.teacher])
+
   return (
     <div className='sidebar'>
         <img src={logo} alt="logo" />
@@ -22,39 +24,37 @@ function Sidebar() {
                 return (
                     <li 
                         className='list-item'
-                        id={window.location.pathname === val.link ? 'active': ''}
+                        id={location.pathname === val.link ? 'active': ''}
                         key={key} 
-                        onClick={() => {window.location.pathname = val.link}}>
+                    >
                     
-                    <div>{val.title}</div>
+                    <Link to={val.link}>{val.title}</Link>
                     </li>
                     )
                 })) : (user.student.isStudent) ? (SidebarData.map((val, key) => {
                   return (
                       <li 
                           className='list-item'
-                          id={window.location.pathname === val.link ? 'active': ''}
+                          id={location.pathname === val.link ? 'active': ''}
                           key={key} 
-                          onClick={() => {window.location.pathname = val.link}}>
+                        >
                       
-                      <div>{val.title}</div>
+                      <Link to={val.link}>{val.title}</Link>
                       </li>
                     )
                   })) : (AdminSideBar.map((val, key) => {
                     return (
                         <li 
-                            className='list-item'
-                            id={window.location.pathname === val.link ? 'active': ''}
+                            className='list-item item'
+                            id={location.pathname === val.link ? 'active': ''}
                             key={key} 
-                            onClick={() => {window.location.pathname = val.link}}>
-                        
-                        <div>{val.title}</div>
+                        >
+                        <Link to={val.link}>{val.title}</Link>
                         </li>
                       )
                   }))}
         </ul>
     </div>
-
   )
 }
 

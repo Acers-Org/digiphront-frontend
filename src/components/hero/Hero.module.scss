@@ -86,17 +86,39 @@ $color: #006D77;
         }
 
         &__secondBtn {
-            border: 1px solid #FF5400;
             border-radius: 56px;
-            background-color: inherit;
-            
+            background: #FF7633;
+            border: none;
+            outline: none;
             a {
+                text-decoration: none;
                 font-family: 'Ubuntu';
                 font-style: normal;
                 font-weight: 700;
                 line-height: 20px;
                 text-align: center;
-                color: #FF5400;
+                color: #FFFFFF;
+                white-space: nowrap;
+                padding: 15px;
+            }
+        }
+
+        &__menuBtn {
+            border-radius: 56px;
+            background: #FF7633;
+            border: none;
+            outline: none;
+            width: 213px;
+            height: 51px;
+
+            a {
+                text-decoration: none;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                text-align: center;
+                color: #FFFFFF;
                 white-space: nowrap;
                 padding: 15px;
             }

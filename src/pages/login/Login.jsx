@@ -7,12 +7,11 @@ import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
 //import { useState, useEffect } from 'react';
-//import useContextGetter from "../../hooks/useContextGetter";
-import AppContext from '../../store/appContext';
+import useContextGetter from "../../hooks/useContextGetter";
+//import AppContext from '../../store/appContext';
 
 function Login() {
-    //const login = useContextGetter();
-    const login = AppContext.Consumer;
+    const auth = useContextGetter();
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
@@ -25,11 +24,15 @@ function Login() {
             console.log(res.data.data)
             console.log(res.data.message)
             console.log(res.data.success)
-            if (res.data.success === 1) {
-                localStorage.setItem('token', res.data.data.token)
-                localStorage.setItem('user', JSON.stringify(res.data.data.user))
-                navigate('/studentDashboard')
-                login(res.data.data)
+            if (res.data.success === 1 && res.data.user.student.isStudent) {
+                auth.login(res.data.data)
+                navigate('studentDashboard', {replace: true})
+            } else if (res.data.success === 1 && res.data.user.teacher.isTeacher) {
+                auth.login(res.data.data)
+                navigate('teacher_dashboard', {replace: true})
+            } else if (res.data.success === 1 && res.data.user.admin.isAdmin) {
+                auth.login(res.data.data)
+                navigate('admin_dashboard', {replace: true})
             }
             
         } catch (e) {

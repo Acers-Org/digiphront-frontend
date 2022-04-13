@@ -1,5 +1,5 @@
 import Sidebar from '../../components/sidebar/Sidebar';
-import Graphs from './Graphs';
+//import Graphs from './Graphs';
 import Progress from './Progress';
 import './StudentDashboard.css'
 
@@ -77,7 +77,7 @@ function StudentDashboard() {
               </div>
               <div className="section3">
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  <Graphs />
+                  {/* <Graphs /> */}
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12"></div>
               </div>

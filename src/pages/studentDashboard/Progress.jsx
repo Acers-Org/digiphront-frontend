@@ -11,10 +11,10 @@ function Progress({done}) {
         setStyle(newStyle);
     }, 1000 )
   return ( 
-    <div class="range">
-        <h3 class="progress-num">{done}%</h3>
+    <div className="range">
+        <h3 className="progress-num">{done}%</h3>
         <div className="progress">
-            <div className="progress-done" style= {style}></div>
+            <div className="progress-done" style={style}></div>
         </div>
     </div>
   )
