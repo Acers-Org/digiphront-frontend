@@ -26,11 +26,11 @@ function App() {
             <Route path='/login' element={<Login/>} />
             <Route path='/teacherSignup' element={<TeacherSignup/>} />
             <Route path='/studentSignup'  element={<StudentSignup/>} />
+            <Route path='/studentDashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
+            <Route path='/teacher_dashboard' element={<ProtectedRoute><TeacherDashboard/></ProtectedRoute>}/>
+            <Route path='/admin_dashboard' element={<ProtectedRoute><AdminDashboard/></ProtectedRoute>}/>
             <Route path='*' element={<NoMatch />}/>
           </Routes>
-          <ProtectedRoute routePath='/studentDashboard' Component={StudentDashboard}/>   
-          <ProtectedRoute routePath='/teacher_dashboard' Component={TeacherDashboard}/>   
-          <ProtectedRoute routePath='/admin_dashboard' Component={AdminDashboard}/>   
         </AppState>
       </div>
   );
