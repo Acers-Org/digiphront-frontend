@@ -6,41 +6,20 @@ import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
-import axios from 'axios';
 
 function Login() {
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
-        email: Yup.string().email('Email is not valid').required('An email address is required'),
+        email: Yup.string().email('Email is not valid').required('Email address is required'),
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
         remember: Yup.string()
     })
     const handleSignin = async (values) => {
-        console.log(values)
-        //const res = await axios.post('https://educlan.herokuapp.com/api/login', values)
-        //console.log(res)
-        //.catch(err => console.log(err))
-        await API.post(`/login`, values)
-        .then((res) => console.log(res))
-        .catch(err => console.log(err))
-
         try {
-            // await axios.post('https://educlan.herokuapp.com/api/login', values)
-            // .then((res) => console.log(res))
-            // .catch(err => console.log(err))
-            // await API.post('/login', values)
-            // .then((res) => console.log(res))
-            // .catch(err => console.log(err))
-
-            fetch(`https://educlan.herokuapp.com/api/login`, {
-                method: 'POST',
-                body: values,
-                headers: {
-                    "Content-type": "application/json"
-                }
-            })
-            .then((res) => console.log(res))
-            .catch(err => console.log(err))
+            console.log(values)
+            const res = await API.post('/login', values)
+            console.log(res)
+            
         } catch (e) {
             console.log('API error: ', e)
         }
