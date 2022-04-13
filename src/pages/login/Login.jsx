@@ -13,23 +13,22 @@ function Login() {
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('An email address is required'),
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
-        remember: Yup.string()
+        rememberMe: Yup.string()
     })
     const handleSignin = async (values) => {
         try {
-        console.log(values)
+        //console.log(values)
         const res = await API.post('/login', values)
-        console.log(res)
+        console.log(res.data)
         
         } catch (e) {
-            console.log('API error: ', e)
+            console.log('API error: ', e.message)
         }
     }    
     const formik = useFormik({
         initialValues: {
             email: '',
             password: '',
-            remember: '',
             user: 'Teacher',
         },
         onSubmit: handleSignin,
@@ -81,7 +80,7 @@ function Login() {
                                 <input type="checkbox" 
                                 name="rememberMe" 
                                 id="rememberMe" 
-                                value={formik.values.remember}
+                                value={formik.values.rememberMe}
                                 onChange={formik.handleChange} />
                                 <label htmlFor="rememberMe"> Remember me</label>
                             </div>
