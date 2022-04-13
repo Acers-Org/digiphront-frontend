@@ -1,7 +1,7 @@
 import loginImg from '../../assets/login-img.png';
 import Icon from '../../assets/icon.svg'
 import './Login.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
@@ -13,6 +13,8 @@ import useContextGetter from "../../hooks/useContextGetter";
 function Login() {
     const auth = useContextGetter();
     const navigate = useNavigate();
+    const location = useLocation();
+    let redirect = location.state?.path || '/';
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
@@ -26,13 +28,13 @@ function Login() {
             console.log(res.data.success)
             if (res.data.success === 1 && res.data.user.student.isStudent) {
                 auth.login(res.data.data)
-                navigate('studentDashboard', {replace: true})
+                navigate('/studentDashboard', {replace: true})
             } else if (res.data.success === 1 && res.data.user.teacher.isTeacher) {
                 auth.login(res.data.data)
-                navigate('teacher_dashboard', {replace: true})
+                navigate('/teacher_dashboard', {replace: true})
             } else if (res.data.success === 1 && res.data.user.admin.isAdmin) {
                 auth.login(res.data.data)
-                navigate('admin_dashboard', {replace: true})
+                navigate('/admin_dashboard', {replace: true})
             }
             
         } catch (e) {
