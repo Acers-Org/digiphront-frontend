@@ -17,12 +17,20 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-        console.log(values)
+        //console.log(values)
         const res = await API.post('/login', values)
-        console.log(res)
+        console.log(res.data.data)
+        console.log(res.data.message)
+        console.log(res.data.success)
         
         } catch (e) {
-            console.log('API error: ', e)
+            if (e.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                console.log(e.response.data);
+                console.log(e.response.status);
+                console.log(e.response.headers);
+              }
         }
     }    
     const formik = useFormik({
