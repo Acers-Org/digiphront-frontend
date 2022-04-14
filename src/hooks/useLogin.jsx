@@ -6,7 +6,7 @@ const useLoggin = () => {
     const token = auth.user.token
     if(!isAuth && token){
         const user = JSON.parse(localStorage.getItem("user"));
-        login(user);
+        auth.login(user);
     }
     return true;
 }

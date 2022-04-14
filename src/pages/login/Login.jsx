@@ -1,20 +1,16 @@
 import loginImg from '../../assets/login-img.png';
 import Icon from '../../assets/icon.svg'
 import './Login.css'
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
-//import { useState, useEffect } from 'react';
 import useContextGetter from "../../hooks/useContextGetter";
-//import AppContext from '../../store/appContext';
 
 function Login() {
-    const auth = useContextGetter();
+    const { login } = useContextGetter();
     const navigate = useNavigate();
-    const location = useLocation();
-    let redirect = location.state?.path || '/';
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
         password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
@@ -23,20 +19,20 @@ function Login() {
     const handleSignin = async (values) => {
         try {
             const res = await API.post('/login', values)
-            console.log(res.data.data)
-            console.log(res.data.message)
-            console.log(res.data.success)
-            if (res.data.success === 1 && res.data.user.student.isStudent) {
-                auth.login(res.data.data)
-                navigate('/studentDashboard', {replace: true})
-            } else if (res.data.success === 1 && res.data.user.teacher.isTeacher) {
-                auth.login(res.data.data)
-                navigate('/teacher_dashboard', {replace: true})
-            } else if (res.data.success === 1 && res.data.user.admin.isAdmin) {
-                auth.login(res.data.data)
-                navigate('/admin_dashboard', {replace: true})
+            //console.log(res.data.data)
+            //console.log(res.data.data.user)
+            if(res.data.success && res.data.data.user.student.isStudent) {
+                login(res.data.data)
+                navigate('/studentDashboard')
             }
-            
+            if(res.data.success && res.data.data.user.teacher.isTeacher) {
+                login(res.data.data)
+                navigate('/teacher_dashboard')
+            }
+            if(res.data.success && res.data.data.user.admin.isAdmin) {
+                login(res.data.data)
+                navigate('/admin_Dashboard')
+            }
         } catch (e) {
             if (e.response) {
                 // The request was made and the server responded with a status code

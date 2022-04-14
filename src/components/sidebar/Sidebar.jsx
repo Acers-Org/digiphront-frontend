@@ -10,6 +10,7 @@ function Sidebar() {
     let location = useLocation()
     const auth = useContextGetter();
     const USER = auth.user;
+    //const USER = JSON.parse(localStorage.getItem('user'));
     const [user, setUser] = useState({admin: {}, student: {}, teacher: {}})
     
     useEffect(()=>{

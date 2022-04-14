@@ -7,7 +7,6 @@ function StudentDashboard() {
   return (    
     <div className='contain'>
       <Sidebar />
-
       <section className="student-dashboard">
         <div className="container">
           <div className="row py-5">
