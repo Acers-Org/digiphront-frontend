@@ -1,6 +1,6 @@
-# EDUCLAN Frontend
+# DigiPhront Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for EDUCLAN- an edutech solution that allows schools to provided learning services to students and manage their data.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows schools to provided learning services to students and manage their data.
 
 ## Table of Content
 * [Available Scripts](#available-scripts)
