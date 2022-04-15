@@ -1,6 +1,6 @@
 # DigiPhront Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows schools to provided learning services to students and manage their data.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows A-level schools to provided learning services to students and manage their data.
 
 ## Table of Content
 * [Available Scripts](#available-scripts)
@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Motivation
 
-This project was conceive as part of the AngelHack Hackaton in 2022. 
+This project was conceive as part of the African Women Innovation Hackathon by AngelHack in 2022. 
 
 ## Available Scripts
 
