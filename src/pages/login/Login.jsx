@@ -21,7 +21,7 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-            const res = await API.post('/login', values)
+            const res = await API.post('/api/login', values)
             setMessages(res.data.message);
             console.log(messages)
             if(res.data.success && res.data.data.user.student.isStudent) {
