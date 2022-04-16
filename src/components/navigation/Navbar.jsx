@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Logo } from '../logo/logo';
 import styles from './Navbar.module.scss'
 import style from '../hero/Hero.module.scss'
@@ -11,23 +11,23 @@ const Navbar = () => {
             <nav className={styles.wrapper__navbar}>
                 <ul className={styles.wrapper__navbar__links}>
                     <li className={styles.wrapper__navbar__links__link}>
-                        <Link to='/'>Features</Link>
+                        <NavLink to='/features'>Features</NavLink>
                     </li>
                     <li className={styles.wrapper__navbar__links__link}>
-                        <Link to='/'>About us</Link>
+                        <NavLink to='/about'>About us</NavLink>
                     </li>
                     <li className={styles.wrapper__navbar__links__link}>
-                        <Link to='/'>Pricing</Link>
+                        <NavLink to='/pricing'>Pricing</NavLink>
                     </li>
                     <li className={styles.wrapper__navbar__links__link}>
-                        <Link to='/'>FAQ</Link>
+                        <NavLink to='/faq'>FAQ</NavLink>
                     </li>
                     <li className={styles.wrapper__navbar__links__link}>
-                        <Link to='/'>Contact us</Link>
+                        <NavLink to='/contact'>Contact us</NavLink>
                     </li>
                     <li>
                         <button className={style.wrap__cta__menuBtn}>
-                            <Link to='/'>Request a Demo</Link>
+                            <Link to='/request'>Request a Demo</Link>
                         </button>
                     </li>
                 </ul>

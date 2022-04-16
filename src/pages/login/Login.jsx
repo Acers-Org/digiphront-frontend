@@ -7,8 +7,11 @@ import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
 import API from '../../utils/Backend'
 import useContextGetter from "../../hooks/useContextGetter";
+import Messages from '../../components/works/Messages';
+import { useState } from 'react';
 
 function Login() {
+    const [messages, setMessages] = useState('')
     const { login } = useContextGetter();
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
@@ -18,9 +21,9 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-            const res = await API.post('/login', values)
-            //console.log(res.data.data)
-            //console.log(res.data.data.user)
+            const res = await API.post('/api/login', values)
+            setMessages(res.data.message);
+            console.log(messages)
             if(res.data.success && res.data.data.user.student.isStudent) {
                 login(res.data.data)
                 navigate('/studentDashboard')
@@ -37,8 +40,11 @@ function Login() {
             if (e.response) {
                 // The request was made and the server responded with a status code
                 // that falls out of the range of 2xx
+                setMessages(e.response.data.message);
                 console.log(e.response.data);
                 console.log(e.response.status);
+                console.log(messages)
+                //return <Messages message={e.response.data.message}/>
             }
         }
     }    
@@ -54,6 +60,7 @@ function Login() {
 
   return (
     <section className='login'>
+        {messages && <Messages messages={messages}/>}
             <div className="row d-flex justify-content-center login">
                 <div className="col-md-6 col-sm-12 img-container">
                     <img src={loginImg} alt="Login" className='img-fluid login-img'/>
