@@ -15,7 +15,7 @@ function Sidebar() {
     
     useEffect(()=>{
         setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});
-    }, [user, USER.user.admin, USER.user.student, USER.user.teacher])
+    }, [USER.user.admin, USER.user.student, USER.user.teacher])
 
   return (
     <div className='sidebar'>
