@@ -24,12 +24,12 @@ const FAQ = () => {
                     id="panel1bh-header"
                     >
                     <Typography sx={{ width: '33%', flexShrink: 0 }} className={styles.faq__accordion__title}>
-                        What is EduClan?
+                        What is DigiPhront?
                     </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography className={styles.faq__accordion__text}>
-                        EDUCLAN is an all-in-one learning and management system platform that allows schools to effectively provide learning services and also manage the data of their students thus enabling them to increase their reach and reduce the stress and workload that comes with managing students data and information.
+                        DigiPhront is an all-in-one learning and management system platform that allows schools to effectively provide learning services and also manage the data of their students thus enabling them to increase their reach and reduce the stress and workload that comes with managing students data and information.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -39,7 +39,7 @@ const FAQ = () => {
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                     >
-                    <Typography sx={{ width: '60%', flexShrink: 0 }} className={styles.faq__accordion__title}>What is your favorite thing about EduClan?</Typography>
+                    <Typography sx={{ width: '60%', flexShrink: 0 }} className={styles.faq__accordion__title}>What is your favorite thing about DigiPhront?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography className={styles.faq__accordion__text}>

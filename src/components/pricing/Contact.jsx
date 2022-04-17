@@ -14,7 +14,7 @@ const Contact = () => {
                 </div>
                 <h1>Email</h1>
                 <p>Contact us via email:</p>
-                <span>educlan@gmail.com</span>
+                <span>digiphront@gmail.com</span>
             </div>
             <div className={styles.contact__email}>
                 <div className={styles.contact__email__icons}>

@@ -5,14 +5,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
-import API from '../../utils/Backend'
+// import API from '../../utils/Backend'
 import useContextGetter from "../../hooks/useContextGetter";
 import Messages from '../../components/works/Messages';
 import { useState } from 'react';
 
 function Login() {
     const [messages, setMessages] = useState('')
-    const { login } = useContextGetter();
+    // const { login } = useContextGetter();
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
@@ -21,21 +21,24 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-            const res = await API.post('/api/login', values)
-            setMessages(res.data.message);
-            console.log(messages)
-            if(res.data.success && res.data.data.user.student.isStudent) {
-                login(res.data.data)
-                navigate('/studentDashboard')
-            }
-            if(res.data.success && res.data.data.user.teacher.isTeacher) {
-                login(res.data.data)
-                navigate('/teacher_dashboard')
-            }
-            if(res.data.success && res.data.data.user.admin.isAdmin) {
-                login(res.data.data)
-                navigate('/admin_Dashboard')
-            }
+            // const res = await API.post('/api/login', values)
+            // setMessages(res.data.message);
+            // console.log(messages)
+            // if(res.data.success && res.data.data.user.student.isStudent) {
+            //     login(res.data.data)
+            //     navigate('/studentDashboard')
+            // }
+            // if(res.data.success && res.data.data.user.teacher.isTeacher) {
+            //         login(res.data.data)
+            //         navigate('/teacher_dashboard')
+            //     }
+            // if(res.data.success && res.data.data.user.admin.isAdmin) {
+            //             login(res.data.data)
+            //             navigate('/admin_Dashboard')
+            //         }
+            localStorage.setItem('user', JSON.stringify(values))
+            console.log(values)
+            navigate('/studentDashboard')
         } catch (e) {
             if (e.response) {
                 // The request was made and the server responded with a status code
@@ -52,7 +55,11 @@ function Login() {
         initialValues: {
             email: '',
             password: '',
-            user: 'Teacher',
+            user: {
+                student: true,
+                admin: false,
+                teacher: false
+            }
         },
         onSubmit: handleSignin,
         validationSchema,
@@ -62,14 +69,14 @@ function Login() {
     <section className='login'>
         {messages && <Messages messages={messages}/>}
             <div className="row d-flex justify-content-center login">
-                <div className="col-md-6 col-sm-12 img-container">
+                <div className="col-md-7 col-sm-12 img-container">
                     <img src={loginImg} alt="Login" className='img-fluid login-img'/>
                     <div className="img-text row">
-                        <img src={Icon} alt="EduClan Icon" className='img-fluid w-25' />
-                        <h1 className='text-white'>Welcome to <span className='edu'>Edu</span><span className='clan'>Clan</span> </h1>
+                        <img src={Icon} alt="DigiPhront Icon" className='img-fluid w-25' />
+                        <h1 className='text-white'>Welcome to <span className='digi'>Digi</span><span className='phront'>Phront</span> </h1>
                     </div>
                 </div>
-                <div className="col-md-6 col-sm-12 m-auto">
+                <div className="col-md-5 col-sm-12 m-auto">
                     <form action="" className='form w-75' onSubmit={formik.handleSubmit}>
                         <div className='d-flex flex-column'>
                             <label htmlFor="email">Email</label>

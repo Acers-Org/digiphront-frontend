@@ -7,7 +7,7 @@ export const Logo = () => {
     return (
         <div className={styles.wrap}>
             <Link to='/'>  
-                <img src={logo} alt='EduClan Logo' className={styles.wrap__logo}/>
+                <img src={logo} alt='DigiPhront Logo' className={styles.wrap__logo}/>
             </Link>
         </div>
     )

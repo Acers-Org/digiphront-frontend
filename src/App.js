@@ -5,7 +5,7 @@ import { Routes, Route} from 'react-router-dom'
 import AppState from './store/AppState';
 
 //Components
-import ProtectedRoute from './components/ProtectedRoute';
+// import ProtectedRoute from './components/ProtectedRoute';
 
 //Pages
 import Landing from './pages/landing/Landing';
@@ -26,9 +26,12 @@ function App() {
             <Route path='/login' element={<Login/>} />
             <Route path='/teacherSignup' element={<TeacherSignup/>} />
             <Route path='/studentSignup'  element={<StudentSignup/>} />
-            <Route path='/studentDashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
+            {/* <Route path='/studentDashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
             <Route path='/teacher_dashboard' element={<ProtectedRoute><TeacherDashboard/></ProtectedRoute>}/>
-            <Route path='/admin_dashboard' element={<ProtectedRoute><AdminDashboard/></ProtectedRoute>}/>
+            <Route path='/admin_dashboard' element={<ProtectedRoute><AdminDashboard/></ProtectedRoute>}/> */}
+            <Route path='/studentDashboard' element={<StudentDashboard/>}/>
+            <Route path='/teacher_dashboard' element={<TeacherDashboard/>}/>
+            <Route path='/admin_dashboard' element={<AdminDashboard/>}/>
             <Route path='*' element={<NoMatch />}/>
           </Routes>
         </AppState>
