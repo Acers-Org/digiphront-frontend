@@ -5,14 +5,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
-// import API from '../../utils/Backend'
+import API from '../../utils/Backend'
 import useContextGetter from "../../hooks/useContextGetter";
 import Messages from '../../components/works/Messages';
 import { useState } from 'react';
 
 function Login() {
     const [messages, setMessages] = useState('')
-    // const { login } = useContextGetter();
+    const { login } = useContextGetter();
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
@@ -21,24 +21,24 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-            // const res = await API.post('/api/login', values)
-            // setMessages(res.data.message);
-            // console.log(messages)
-            // if(res.data.success && res.data.data.user.student.isStudent) {
-            //     login(res.data.data)
-            //     navigate('/studentDashboard')
-            // }
-            // if(res.data.success && res.data.data.user.teacher.isTeacher) {
-            //         login(res.data.data)
-            //         navigate('/teacher_dashboard')
-            //     }
-            // if(res.data.success && res.data.data.user.admin.isAdmin) {
-            //             login(res.data.data)
-            //             navigate('/admin_Dashboard')
-            //         }
-            localStorage.setItem('user', JSON.stringify(values))
-            console.log(values)
-            navigate('/studentDashboard')
+            const res = await API.post('/api/login', values)
+            setMessages(res.data.message);
+            console.log(messages)
+            if(res.data.success && res.data.data.user.student.isStudent) {
+                login(res.data.data)
+                navigate('/studentDashboard')
+            }
+            if(res.data.success && res.data.data.user.teacher.isTeacher) {
+                    login(res.data.data)
+                    navigate('/teacher_dashboard')
+                }
+            if(res.data.success && res.data.data.user.admin.isAdmin) {
+                        login(res.data.data)
+                        navigate('/admin_Dashboard')
+                    }
+            // localStorage.setItem('user', JSON.stringify(values))
+            // console.log(values)
+            // navigate('/studentDashboard')
         } catch (e) {
             if (e.response) {
                 // The request was made and the server responded with a status code
