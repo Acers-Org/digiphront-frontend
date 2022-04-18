@@ -15,7 +15,7 @@ const Landing = () => {
                  <Soft/>
                 <Works/>
                 <Pricing/>
-                <FAQ/>
+                {/* <FAQ/> */}
                 <Contact/>
                 <Foot/>
             </Layout>
