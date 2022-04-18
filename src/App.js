@@ -16,6 +16,11 @@ import StudentDashboard from './pages/studentDashboard/StudentDashboard';
 import TeacherDashboard from './pages/teacherDashboard/Teacher';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import NoMatch from './pages/noMatch/404';
+import About from './pages/about/About';
+import FAQ from './components/pricing/FAQ';
+import Contact from './components/contact/Contact';
+import Pricing from './pages/pricing/Pricing';
+import RequestDemo from './pages/requestDemo/RequestDemo';
 
 function App() {
   return (
@@ -24,9 +29,14 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Landing/>}/>
             <Route path='/login' element={<Login/>} />
-            <Route path='/teacherSignup' element={<TeacherSignup/>} />
-            <Route path='/studentSignup'  element={<StudentSignup/>} />
-            <Route path='/studentDashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
+            <Route path='/about' element={<About/>} />
+            <Route path='/faq' element={<FAQ/>} />
+            <Route path='/contact' element={<Contact/>} />
+            <Route path='/pricing' element={<Pricing/>} />
+            <Route path='/request' element={<RequestDemo/>} />
+            <Route path='/teacher_signup' element={<TeacherSignup/>} />
+            <Route path='/student_signup'  element={<StudentSignup/>} />
+            <Route path='/student_dashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
             <Route path='/teacher_dashboard' element={<ProtectedRoute><TeacherDashboard/></ProtectedRoute>}/>
             <Route path='/admin_dashboard' element={<ProtectedRoute><AdminDashboard/></ProtectedRoute>}/>
             {/* <Route path='/studentDashboard' element={<StudentDashboard/>}/>
