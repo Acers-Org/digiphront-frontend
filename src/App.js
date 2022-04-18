@@ -1,11 +1,11 @@
-import './App.css';
-import { Routes, Route} from 'react-router-dom'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 //App State
-import AppState from './store/AppState';
+import AppState from "./store/AppState";
 
 //Components
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from "./components/ProtectedRoute";
 
 //Pages
 import Landing from './pages/landing/Landing';
@@ -36,16 +36,34 @@ function App() {
             <Route path='/request' element={<RequestDemo/>} />
             <Route path='/teacher_signup' element={<TeacherSignup/>} />
             <Route path='/student_signup'  element={<StudentSignup/>} />
-            <Route path='/student_dashboard' element={<ProtectedRoute><StudentDashboard/></ProtectedRoute>}/>
-            <Route path='/teacher_dashboard' element={<ProtectedRoute><TeacherDashboard/></ProtectedRoute>}/>
-            <Route path='/admin_dashboard' element={<ProtectedRoute><AdminDashboard/></ProtectedRoute>}/>
-            {/* <Route path='/studentDashboard' element={<StudentDashboard/>}/>
-            <Route path='/teacher_dashboard' element={<TeacherDashboard/>}/>
-            <Route path='/admin_dashboard' element={<AdminDashboard/>}/> */}
-            <Route path='*' element={<NoMatch />}/>
-          </Routes>
-        </AppState>
-      </div>
+            <Route
+            path="/student_dashboard"
+            element={
+              <ProtectedRoute>
+                <StudentDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/teacher_dashboard"
+            element={
+              <ProtectedRoute>
+                <TeacherDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin_dashboard"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </AppState>
+    </div>
   );
 }
 

@@ -103,7 +103,7 @@ function Login() {
                             ) : null}
                         </div>
                         <button className="btn text-uppercase btn-block btn-primary w-100 mt-3" type='submit' disabled={formik.isSubmitting} >
-                            {!formik.isSubmitting ? ("Sign Up") : (<Spinner animation="border" variant="light"/>)}
+                            {!formik.isSubmitting ? ("Login") : (<Spinner animation="border" variant="light"/>)}
                         </button>
 
                         <div className="d-flex justify-content-between mt-3 align">

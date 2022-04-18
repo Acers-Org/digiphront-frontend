@@ -12,7 +12,7 @@ const Landing = () => {
         <div>
             <Layout>
                 <Hero/>
-                <Soft/>
+                 <Soft/>
                 <Works/>
                 <Pricing/>
                 <FAQ/>
