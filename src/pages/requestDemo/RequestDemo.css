@@ -1,0 +1,82 @@
+.request-demo {
+    background-color: #ffffff;
+}
+
+.request-demo .header-section {
+    background-color: #FFF8F8;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.request-demo .header-section button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+
+.request-demo form input{
+   padding: 5px 100px;
+   width: 100%;
+}
+
+.request-demo form input, 
+.request-demo form textarea,
+.request-demo form select{
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.request-demo form select{
+    border: 2px solid #66a7ad;
+    outline: none;
+    padding: 8px;
+}
+
+.request-demo form select option{
+    background-color: #66a7ad;
+    color: #ffffff;
+    padding: 30px;
+}
+.request-demo form select option:hover{
+    background-color: #66a7ad !important;
+    color: #ffffff;
+}
+
+
+.request-demo form label{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;   
+    color: #666666;
+}
+
+/* remove webkit from input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.submit {
+    background: #006D77;
+    border-radius: 8px;
+    position: relative;
+    left: 40%;
+    color: white;
+    padding: 10px 20px;
+}
