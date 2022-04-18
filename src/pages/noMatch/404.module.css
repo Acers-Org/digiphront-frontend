@@ -7,10 +7,6 @@
     flex-direction: column;
 }
 
-h1 {
-    text-align: center;
-}
-
-p {
+.error-header, .error-paragraph {
     text-align: center;
 }

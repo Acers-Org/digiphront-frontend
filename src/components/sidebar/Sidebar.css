@@ -9,8 +9,8 @@
 .sidebar {
     width: 250px;
     background-color: var(--background);
-    height:100vh;
-    position: absolute;
+    height:200vh;
+    position: fixed;
     left: 0;
     top: 0;
 }
@@ -26,6 +26,7 @@
     line-height: 30px;
     cursor: pointer;
     text-align: left;
+    margin-top: 12px;
 }
 
 .list-item a {

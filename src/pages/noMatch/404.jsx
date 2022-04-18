@@ -4,8 +4,8 @@ const NoMatch = () => {
 
     return (
         <div className={styles.nomatch}>
-            <h1>404 Error page</h1>
-            <p>Sorry, but this page doesn't exit</p>
+            <h1 className='error-header'>404 Error page</h1>
+            <p className='error-paragraph'>Sorry, but this page doesn't exit</p>
         </div>
     )
 }

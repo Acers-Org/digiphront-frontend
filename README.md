@@ -1,6 +1,6 @@
-# EDUCLAN Frontend
+# DigiPhront Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for EDUCLAN- an edutech solution that allows schools to provided learning services to students and manage their data.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows A-level schools to provided learning services to students and manage their data. A demo of the project can be seen in https://digiphront-app.vercel.app/login. DIGIPHRONT is an all-in-one learning and management system platform that allows schools to effectively provide learning services and also manage the data of their students thus enabling them to increase their reach and reduce the stress and workload that comes with managing students data and information.
 
 ## Table of Content
 * [Available Scripts](#available-scripts)
@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Motivation
 
-This project was conceive as part of the AngelHack Hackaton in 2022. 
+This project was conceive as part of the African Women Innovation Hackathon by AngelHack in 2022. 
 
 ## Available Scripts
 
@@ -53,6 +53,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 This project is possible as a result of the collaborative work of the members list below:
 * Remilekun  Odegbami
-* Damilola Davis
+* Damilola Davids
 * Kotoye Gbemisola
 * Evelyn Anyebe

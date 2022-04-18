@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__copy}>
-                <p>Copyright &copy; 2022 EduClan.</p>
+                <p>Copyright &copy; 2022 DigiPhront.</p>
             </div>
             <nav className={styles.wrapper__navbar}>
                 <ul className={styles.wrapper__navbar__links}>

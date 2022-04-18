@@ -9,13 +9,19 @@ import { Link, useLocation } from 'react-router-dom';
 function Sidebar() {
     let location = useLocation()
     const auth = useContextGetter();
-    const USER = auth.user;
-    //const USER = JSON.parse(localStorage.getItem('user'));
+    // const USER = auth.user;
+    const USER = JSON.parse(localStorage.getItem('user'));
+    // const USER = localStorage.getItem('user');
+    // console.log(USER)
     const [user, setUser] = useState({admin: {}, student: {}, teacher: {}})
     
     useEffect(()=>{
         setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});
     }, [USER.user.admin, USER.user.student, USER.user.teacher])
+
+    // useEffect(()=>{
+    //     setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});
+    // }, [ USER.user.admin, USER.user.student, USER.user.teacher])
 
   return (
     <div className='sidebar'>

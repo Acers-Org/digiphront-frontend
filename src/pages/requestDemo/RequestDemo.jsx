@@ -1,18 +1,16 @@
-import loginImg from '../../assets/login-img.png';
-import Icon from '../../assets/icon.svg'
-import './Login.css'
+import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Spinner } from 'react-bootstrap';
 import * as Yup from 'yup';
-import API from '../../utils/Backend'
+// import API from '../../utils/Backend'
 import useContextGetter from "../../hooks/useContextGetter";
 import Messages from '../../components/works/Messages';
 import { useState } from 'react';
 
-function Login() {
+function RequestDemo() {
     const [messages, setMessages] = useState('')
-    const { login } = useContextGetter();
+    // const { login } = useContextGetter();
     const navigate = useNavigate();
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email is not valid').required('Email address is required'),
@@ -21,24 +19,24 @@ function Login() {
     })
     const handleSignin = async (values) => {
         try {
-            const res = await API.post('/api/login', values)
-            setMessages(res.data.message);
-            console.log(messages)
-            if(res.data.success && res.data.data.user.student.isStudent) {
-                login(res.data.data)
-                navigate('/studentDashboard')
-            }
-            if(res.data.success && res.data.data.user.teacher.isTeacher) {
-                    login(res.data.data)
-                    navigate('/teacher_dashboard')
-                }
-            if(res.data.success && res.data.data.user.admin.isAdmin) {
-                        login(res.data.data)
-                        navigate('/admin_Dashboard')
-                    }
-            // localStorage.setItem('user', JSON.stringify(values))
-            // console.log(values)
-            // navigate('/studentDashboard')
+            // const res = await API.post('/api/login', values)
+            // setMessages(res.data.message);
+            // console.log(messages)
+            // if(res.data.success && res.data.data.user.student.isStudent) {
+            //     login(res.data.data)
+            //     navigate('/studentDashboard')
+            // }
+            // if(res.data.success && res.data.data.user.teacher.isTeacher) {
+            //         login(res.data.data)
+            //         navigate('/teacher_dashboard')
+            //     }
+            // if(res.data.success && res.data.data.user.admin.isAdmin) {
+            //             login(res.data.data)
+            //             navigate('/admin_Dashboard')
+            //         }
+            localStorage.setItem('user', JSON.stringify(values))
+            console.log(values)
+            navigate('/studentDashboard')
         } catch (e) {
             if (e.response) {
                 // The request was made and the server responded with a status code
@@ -64,20 +62,17 @@ function Login() {
         onSubmit: handleSignin,
         validationSchema,
     })
-
-  return (
-    <section className='login'>
-        {messages && <Messages messages={messages}/>}
-            <div className="row d-flex justify-content-center login">
-                <div className="col-md-7 col-sm-12 img-container">
-                    <img src={loginImg} alt="Login" className='img-fluid login-img'/>
-                    <div className="img-text row">
-                        <img src={Icon} alt="DigiPhront Icon" className='img-fluid w-25' />
-                        <h1 className='text-white'>Welcome to <span className='digi'>Digi</span><span className='phront'>Phront</span> </h1>
-                    </div>
+  return (      
+    <section className='request-demo'>
+        <div className="container">
+            <div className="row">                
+                {messages && <Messages messages={messages}/>}
+                <div className="header-section d-flex justify-content-between">
+                    <h1 className="header">Request a Demo</h1>
+                    <button>X</button>
                 </div>
-                <div className="col-md-5 col-sm-12 m-auto">
-                    <form action="" className='form w-75' onSubmit={formik.handleSubmit}>
+
+                <form action="" className='form w-75' onSubmit={formik.handleSubmit}>
                         <div className='d-flex flex-column'>
                             <label htmlFor="email">Email</label>
                             <input type="email" 
@@ -103,7 +98,7 @@ function Login() {
                             ) : null}
                         </div>
                         <button className="btn text-uppercase btn-block btn-primary w-100 mt-3" type='submit' disabled={formik.isSubmitting} >
-                            {!formik.isSubmitting ? ("Login") : (<Spinner animation="border" variant="light"/>)}
+                            {!formik.isSubmitting ? ("Sign Up") : (<Spinner animation="border" variant="light"/>)}
                         </button>
 
                         <div className="d-flex justify-content-between mt-3 align">
@@ -118,10 +113,10 @@ function Login() {
                             <h5> <Link to="/" className='text-capitalize'> Forgot password?</Link> </h5>
                         </div>
                     </form>
-                </div>
-            </div>        
+            </div>
+        </div>
     </section>
   )
 }
 
-export default Login
+export default RequestDemo

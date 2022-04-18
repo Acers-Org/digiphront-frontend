@@ -10,7 +10,7 @@ const Works = () => {
             <div className={styles.works__top}>
                 <div className={styles.works__top__info}>
                     <h2 className={styles.works__top__info__title}>Gain more insight into how people use our product</h2>
-                    <p className={styles.works__top__info__text}>With EduClan you can manage your school activities from anywhere in the world and effectively teach students regardless of their location.</p>
+                    <p className={styles.works__top__info__text}>With DigiPhront you can manage your school activities from anywhere in the world and effectively teach students regardless of their location.</p>
                 </div>
                 <div className={styles.works__top__imageBg}>
                     <div className={styles.works__top__imageBg__pic}>
@@ -24,7 +24,7 @@ const Works = () => {
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>1</div>
                     <h2>Improve Staff Productivity</h2>
-                    <p>With EduClan your staff can focus on teaching and manage students effectively</p>
+                    <p>With DigiPhront your staff can focus on teaching and manage students effectively</p>
                 </div>
                 <div className={styles.works__bottom__feature}>
                     <div className={styles.works__bottom__feature__num}>2</div>

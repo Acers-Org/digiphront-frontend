@@ -9,14 +9,14 @@ function StudentSignup() {
         <section className='login'>
             <div class="container-fluid">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-md-6 col-sm-12 img-container">
+                    <div class="col-md-7 col-sm-12 img-container">
                         <img src={loginImg} alt="Login" className='img-fluid login-img pad'/>
                         <div className="img-text row">
-                            <img src={Icon} alt="EduClan Icon" className='img-fluid w-25' />
-                            <h2 className='text-white'>Welcome to <span className='edu'>Edu</span><span className='clan'>Clan</span> </h2>
+                            <img src={Icon} alt="DigiPhront Icon" className='img-fluid w-25' />
+                            <h2 className='text-white'>Welcome to <span className='digi'>Digi</span><span className='phront'>Phront</span> </h2>
                         </div>
                     </div>
-                    <div className="col-md-6 col-sm-12 m-auto">
+                    <div className="col-md-5 col-sm-12 m-auto">
                         <form action="" className=' form w-75'>
                             <h1 className="text-center">Create Account</h1>
 

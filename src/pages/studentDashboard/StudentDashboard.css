@@ -4,12 +4,18 @@
 }
 
 .student-dashboard {
-    width: calc(100% - 250px);
     height: auto;
     background-color: #FFFFFF;
     position: relative;
     left: 250px;
     top: 0;
+}
+
+@media (min-width:768px) {
+    .student-dashboard {
+        width: calc(100% - 250px);
+    }
+    
 }
 
 .progress-cards {
@@ -35,13 +41,12 @@
 }
 
 .welcome-section {
-    width: 564px;
-    height: 167px;
+    width: auto;
+    height: auto;
     background: #E4E6E6;
     border-radius: 18px;
     padding: 15px 30px;
     margin-bottom: 30px;
-    position: relative;
     top: -20px;
 }
 
@@ -62,13 +67,12 @@
     position: relative;
     top: -40px;
     text-transform: capitalize;
+    
 }
 
 .progress-cards .card {
     border-radius: 27px 27px 0 0;
-        background: #FFFFFF;
-    /* edu shadow */
-
+    background: #FFFFFF;
     box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
     border-radius: 27px;
 }
@@ -89,7 +93,6 @@
     line-height: 30px;
     color: #002C30;
 }
-
 .progress-cards .card-info .position {
     font-weight: 700;
     font-size: 20px;
@@ -102,4 +105,227 @@
     font-size: 20px;
     line-height: 30px;
     color: #FF5400;
+}
+
+
+.section3 .feed-content{
+    background: #CCE2E4;
+    border-radius: 13px;
+    padding: 10px 30px;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.section3 .feed .feed-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.section3 .feed .feed-content .feed-content-header{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #001618;
+    padding-left: 5px;
+}
+
+.section3 .feed .feed-content .feed-content-header i {
+    color: red;
+}
+
+.section3 .feed .feed-content .feed-content-text  {
+    color: grey;
+}
+
+.section3 .feed-box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 27px; 
+    width: fit-content;
+    padding: 20px;
+}
+
+.ui-widget {
+    /* position: absolute; */
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border: 1.2rem solid #EEAF0D;
+    text-align: center;
+    border-radius: 9rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0.3);
+    border-top-color: #A6CEE3;
+    border-bottom-color: #EA1111;
+    border-left-color:  #4ACAC2;
+    border-right-color: #4286C6;
+    box-sizing: border-box;
+}
+
+.ui-value {
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+
+.section3 .total-improvement{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 27px;
+    width: fit-content;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-left: 0;
+}
+
+.section3 .total-improvement .graph {
+    display: flex;
+}
+
+.section3 .total-improvement .header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #002C30;
+}
+.section3 .total-improvement li {
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #001618;
+
+}
+
+.section3 .total-improvement .ict {
+    color: #EA1111;
+}
+.section3 .total-improvement .eng {
+    color: #EEAF0D;
+}
+.section3 .total-improvement .maths {
+    color: #4286C6;
+}
+.section3 .total-improvement .arts {
+    color: #A6CEE3;
+}
+.section3 .total-improvement .civic {
+    color: #A6CEE3;
+}
+
+/* aside */
+.student-dashboard .search-box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 9px;
+    padding: 10px;
+    padding-left: 50px;
+    width: 100%;
+}
+
+.student-dashboard .search {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+.group {
+    color: rgba(73, 75, 75, 0.5);
+    border-bottom: 3px solid #C9CCCC;
+    white-space: nowrap;
+    width: 80%;
+}
+
+input[type="search"]::placeholder {
+    color: rgba(73, 75, 75, 0.5);
+}
+
+.schedule .main-header, .notice-board .main-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 30px;
+    color: #002C30;
+    margin: 10px 0;
+}
+
+.schedule .content p a{
+    color: red;
+    text-decoration: none;
+}
+
+
+.aside .box {    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px 8px rgba(229, 229, 229, 0.25);
+    border-radius: 27px;
+    padding: 15px 40px;
+    margin-bottom: 15px;
+} 
+
+.aside .box .box-header {    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #002C30;
+} 
+
+.aside .box .sub {    
+    color: rgba(73, 75, 75, 0.5);
+    font-size: 18px;
+} 
+
+.notice-board .content {    
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.notice-board .header {    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+} 
+
+.notice-board .date {    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+} 
+
+
+@media (max-width:770px) {
+    .search-box-group {
+        display: none !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .welcome-section {
+        width: 75vw;
+    }
+    .welcome-section .header{
+        font-size: 35px;
+    }
+    .welcome-section .header, .welcome-section .welcome-text {
+        font-size: 16px;
+    }    
+    .progress-cards {
+        width: 75vw;
+    }
+    .aside {
+        display: none;
+    }
 }
