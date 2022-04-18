@@ -26,7 +26,7 @@ function Login() {
             console.log(messages)
             if(res.data.success && res.data.data.user.student.isStudent) {
                 login(res.data.data)
-                navigate('/studentDashboard')
+                navigate('/student_dashboard')
             }
             if(res.data.success && res.data.data.user.teacher.isTeacher) {
                     login(res.data.data)
@@ -34,7 +34,7 @@ function Login() {
                 }
             if(res.data.success && res.data.data.user.admin.isAdmin) {
                         login(res.data.data)
-                        navigate('/admin_Dashboard')
+                        navigate('/admin_dashboard')
                     }
             // localStorage.setItem('user', JSON.stringify(values))
             // console.log(values)
