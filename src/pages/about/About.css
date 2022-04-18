@@ -1,0 +1,116 @@
+.about {
+    background:#EDF6F9;
+}
+
+.about a{
+    text-decoration: none;
+}
+
+.about a:hover{
+    color: #FF7633 !important;
+}
+
+.about .header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 62px;
+    text-align: center;
+    color: #00386E;
+    padding: 40px 0;
+}
+
+.about .sub-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 31px;
+    text-align: justify;
+    color: #094449;
+}
+
+.section1, .socials {
+    flex-wrap: wrap;
+}
+
+.section1 .abt-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: justify;
+    color: #000000;
+    width: 460px;
+}
+
+.section1 img {
+    width: 527px;
+    height: 550px;
+    margin-bottom: 20px;
+}
+
+.about .second-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: #00386E;
+    padding: 50px 0;
+}
+
+.about .card {
+    background:#ffffff;
+}
+
+.about .section2 .card {
+    background:#ffffff;
+    max-width:200px;
+    max-height:200px;
+    min-width:200px;
+    min-height:200px;
+    overflow-y: auto;
+} 
+
+.about .card i {
+    background:#FF7633;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.about .card .green{
+    background:#83c5be;
+    height: 70px;
+}
+
+.about .cards .card .card-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #252121;
+    background-color: inherit;
+    border: none;
+}
+
+.about .cards .card .card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #6F6464;
+}
+
+
+
+@media (max-width:769px) {
+    .about .section2 .cards {
+        overflow-y: scroll;
+    }
+    
+}

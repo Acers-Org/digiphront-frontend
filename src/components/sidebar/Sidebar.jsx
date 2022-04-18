@@ -12,7 +12,7 @@ function Sidebar() {
     // const USER = auth.user;
     const USER = JSON.parse(localStorage.getItem('user'));
     // const USER = localStorage.getItem('user');
-    console.log(USER)
+    // console.log(USER)
     const [user, setUser] = useState({admin: {}, student: {}, teacher: {}})
     
     // useEffect(()=>{
