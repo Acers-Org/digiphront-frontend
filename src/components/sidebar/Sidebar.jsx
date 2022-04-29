@@ -2,13 +2,13 @@ import './Sidebar.css';
 import { SidebarData, TeacherSideBar, AdminSideBar } from './SidebarData';
 import logo from '../../assets/logo.svg'
 import { useState, useEffect } from 'react';
-import useContextGetter from '../../hooks/useContextGetter';
+// import useContextGetter from '../../hooks/useContextGetter';
 import { Link, useLocation } from 'react-router-dom';
 
 
 function Sidebar() {
     let location = useLocation()
-    const auth = useContextGetter();
+    // const auth = useContextGetter();
     // const USER = auth.user;
     const USER = JSON.parse(localStorage.getItem('user'));
     // const USER = localStorage.getItem('user');
@@ -17,7 +17,7 @@ function Sidebar() {
     
     useEffect(()=>{
         setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});
-    }, [USER.user.admin, USER.user.student, USER.user.teacher])
+    }, [user, USER.user.admin, USER.user.student, USER.user.teacher])
 
     // useEffect(()=>{
     //     setUser({...user, admin: USER.user.admin, student: USER.user.student, teacher: USER.user.teacher});

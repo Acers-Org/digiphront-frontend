@@ -1,6 +1,6 @@
 import Sidebar from '../../components/sidebar/Sidebar';
 import Progress from './Progress';
-import weeklyProgress from '../../assets/student-progress.PNG'
+// import weeklyProgress from '../../assets/student-progress.PNG'
 import './StudentDashboard.css'
 import interhouse from '../../assets/interhouse.svg'
 import pta from '../../assets/pta.svg'
