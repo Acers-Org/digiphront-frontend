@@ -1,69 +1,66 @@
-.socials{
-    background-color: #EDF6F9;
-    margin-bottom: 20px;
-    padding: 100px 0;
+.socials {
+  background-color: #edf6f9;
+  margin-bottom: 20px;
+  padding: 100px 0;
 }
 
-.socials .card{
-    background-color: inherit;
-    border: none;
-    margin-bottom: 15px;
+.socials .card {
+  background-color: inherit;
+  border: none;
+  margin-bottom: 15px;
 }
 
-.socials .card .sm-name{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 38px;
-    text-align: center;
-    color: #2A3342;
+.socials .card .sm-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  color: #2a3342;
 }
 
-.socials .card .sm-text{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #556987;
+.socials .card .sm-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #556987;
 }
 
-.socials .card .sm-info{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #006D77;
+.socials .card .sm-info {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #006d77;
 }
 
 .socials .card i {
-    background-color: #006D77;
-    border-radius: 50%;
-    text-align: center;
-    margin: 0 auto !important;
-    padding: 15px;
-    font-size: 20px;
-    color: whitesmoke;
+  background-color: #006d77;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto !important;
+  padding: 15px;
+  font-size: 20px;
+  color: whitesmoke;
 }
 
-.about .socials .card .sm-info a i{
-    background-color: inherit;
-    color: #006D77;
+.about .socials .card .sm-info a i {
+  background-color: inherit;
+  color: #006d77;
 }
 
-.about .socials .card .sm-info a i:hover{
-    color: #FF7633;
+.about .socials .card .sm-info a i:hover {
+  color: #ff7633;
 }
 
-
-
-@media (max-width:769px) {
-    .socials {
-        overflow: scroll;
-    }
-    
+@media (max-width: 769px) {
+  .socials {
+    overflow: scroll;
+  }
 }
