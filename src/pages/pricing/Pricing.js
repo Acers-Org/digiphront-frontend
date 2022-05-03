@@ -1,16 +1,15 @@
-import React from 'react'
-import Footer from '../../components/footer/Footer'
-import Navbar from '../../components/navigation/Navbar'
-import Pricing from '../../components/pricing/Pricing'
+import React from "react";
+import Pricing from "../../components/pricing/Pricing";
+import Layout from "../../layout/Layout";
 
 function PricingPage() {
   return (
     <div>
-        <Navbar />
-        < Pricing />
-        <Footer />
+      <Layout>
+        <Pricing />
+      </Layout>
     </div>
-  )
+  );
 }
 
-export default PricingPage
+export default PricingPage;
