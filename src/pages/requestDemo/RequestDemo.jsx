@@ -1,122 +1,178 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { useFormik } from 'formik';
-import { Spinner } from 'react-bootstrap';
-import * as Yup from 'yup';
-// import API from '../../utils/Backend'
-import useContextGetter from "../../hooks/useContextGetter";
-import Messages from '../../components/works/Messages';
-import { useState } from 'react';
+import "./RequestDemo.css";
+import { Link } from "react-router-dom";
+import Layout from "../../layout/Layout";
+import { useFormik } from "formik";
+import { Spinner } from "react-bootstrap";
+import * as Yup from "yup";
+import API from "../../utils/Backend";
+import Messages from "../../components/works/Messages";
+import { useState } from "react";
 
 function RequestDemo() {
-    const [messages, setMessages] = useState('')
-    // const { login } = useContextGetter();
-    const navigate = useNavigate();
-    const validationSchema = Yup.object().shape({
-        email: Yup.string().email('Email is not valid').required('Email address is required'),
-        password: Yup.string().min(8, 'Password must be 8 characters or more').required('Password is required!'),
-        rememberMe: Yup.string()
-    })
-    const handleSignin = async (values) => {
-        try {
-            // const res = await API.post('/api/login', values)
-            // setMessages(res.data.message);
-            // console.log(messages)
-            // if(res.data.success && res.data.data.user.student.isStudent) {
-            //     login(res.data.data)
-            //     navigate('/studentDashboard')
-            // }
-            // if(res.data.success && res.data.data.user.teacher.isTeacher) {
-            //         login(res.data.data)
-            //         navigate('/teacher_dashboard')
-            //     }
-            // if(res.data.success && res.data.data.user.admin.isAdmin) {
-            //             login(res.data.data)
-            //             navigate('/admin_Dashboard')
-            //         }
-            localStorage.setItem('user', JSON.stringify(values))
-            console.log(values)
-            navigate('/studentDashboard')
-        } catch (e) {
-            if (e.response) {
-                // The request was made and the server responded with a status code
-                // that falls out of the range of 2xx
-                setMessages(e.response.data.message);
-                console.log(e.response.data);
-                console.log(e.response.status);
-                console.log(messages)
-                //return <Messages message={e.response.data.message}/>
-            }
-        }
-    }    
-    const formik = useFormik({
-        initialValues: {
-            email: '',
-            password: '',
-            user: {
-                student: true,
-                admin: false,
-                teacher: false
-            }
-        },
-        onSubmit: handleSignin,
-        validationSchema,
-    })
-  return (      
-    <section className='request-demo'>
-        <div className="container">
-            <div className="row">                
-                {messages && <Messages messages={messages}/>}
-                <div className="header-section d-flex justify-content-between">
-                    <h1 className="header">Request a Demo</h1>
-                    <button>X</button>
+  const [messages, setMessages] = useState("");
+  const [closeForm, setCloseForm] = useState(false);
+  const validationSchema = Yup.object().shape({
+    school_name: Yup.string().required("School name is required"),
+    category: Yup.string().required("Category of school is required"),
+    email: Yup.string()
+      .email("School Email is not valid")
+      .required("School Email address is required"),
+    phone: Yup.string()
+      .min(11, "Phone number must be between 11 and 15 characters")
+      .max(15, "Phone number must be between 11 and 15 characters")
+      .required("Phone number is required!"),
+  });
+  const handleRequestDemo = async (values) => {
+    try {
+      values.contact = { email: values.email, phone: values.phone };
+      const res = await API.post("/api/schools", values);
+      if (res.data.success) {
+        setMessages("Your request has been submitted successfully.");
+        setCloseForm(true);
+      }
+    } catch (e) {
+      if (e.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        // setMessages(e.response.data.message);
+        console.log(e.response.data);
+        console.log(e.response.status);
+        //console.log(messages);
+        //return <Messages message={e.response.data.message}/>
+      }
+    }
+  };
+  const formik = useFormik({
+    initialValues: {
+      school_name: "",
+      category: "",
+      email: "",
+      phone: "",
+      contact: {
+        email: "",
+        phone: "",
+      },
+      approved: true,
+      school_logo: "image_url",
+    },
+    onSubmit: handleRequestDemo,
+    validationSchema,
+  });
+
+  return (
+    <Layout>
+      <section className="demo">
+        <div className="d-flex justify-content-center alignt-items-center">
+          <div className="col-md-8 col-sm-12 py-3 px-3">
+            {messages && <Messages messages={messages} />}
+            {!closeForm && (
+              <form
+                action=""
+                className="form w-100 py-3 px-3"
+                onSubmit={formik.handleSubmit}
+              >
+                <h1>
+                  Welcome to <span className="digi">Digi</span>
+                  <span className="phront">Phront</span>{" "}
+                </h1>
+                <p>
+                  Fill the information below to get your school on board. Our
+                  team will contact you with 48th hours for the next steps.
+                  Thank you!
+                </p>
+
+                <div className="d-flex flex-column">
+                  <label htmlFor="school name">School Name</label>
+                  <input
+                    type="text"
+                    name="school_name"
+                    id="school_name"
+                    value={formik.values.school_name}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.school_name && formik.touched.school_name ? (
+                    <span className="error">{formik.errors.school_name}</span>
+                  ) : null}
                 </div>
+                <div className="d-flex flex-column">
+                  <label htmlFor="category">
+                    School Category: (University, colledge, O-level)
+                  </label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="category"
+                    value={formik.values.category}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.category && formik.touched.category ? (
+                    <span className="error">{formik.errors.category}</span>
+                  ) : null}
+                </div>
+                <div className="d-flex flex-column">
+                  <label htmlFor="email">School Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.email && formik.touched.email ? (
+                    <span className="error">{formik.errors.email}</span>
+                  ) : null}
+                </div>
+                <div className="d-flex flex-column">
+                  <label htmlFor="phone number">Phone Number</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    value={formik.values.phone}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.password && formik.touched.password ? (
+                    <span className="error">{formik.errors.password}</span>
+                  ) : null}
+                </div>
+                <button
+                  className="btn text-uppercase btn-block btn-primary w-100 mt-3"
+                  type="submit"
+                  disabled={formik.isSubmitting}
+                >
+                  {!formik.isSubmitting ? (
+                    "Submit"
+                  ) : (
+                    <Spinner animation="border" variant="light" />
+                  )}
+                </button>
 
-                <form action="" className='form w-75' onSubmit={formik.handleSubmit}>
-                        <div className='d-flex flex-column'>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" 
-                            name="email" 
-                            id="email" 
-                            value={formik.values.email}
-                            onChange={formik.handleChange}
-                            />
-                            {formik.errors.email && formik.touched.email ? (
-                                <span className='error'>{formik.errors.email}</span>
-                            ) : null}
-                        </div>
-                        <div className="d-flex flex-column">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" 
-                            name="password" 
-                            id="password"
-                            value={formik.values.password}
-                            onChange={formik.handleChange}
-                            />
-                            {formik.errors.password && formik.touched.password ? (
-                            <span className='error'>{formik.errors.password}</span>
-                            ) : null}
-                        </div>
-                        <button className="btn text-uppercase btn-block btn-primary w-100 mt-3" type='submit' disabled={formik.isSubmitting} >
-                            {!formik.isSubmitting ? ("Sign Up") : (<Spinner animation="border" variant="light"/>)}
-                        </button>
-
-                        <div className="d-flex justify-content-between mt-3 align">
-                            <div className="checkbox">
-                                <input type="checkbox" 
-                                name="rememberMe" 
-                                id="rememberMe" 
-                                value={formik.values.rememberMe}
-                                onChange={formik.handleChange} />
-                                <label htmlFor="rememberMe"> Remember me</label>
-                            </div>
-                            <h5> <Link to="/" className='text-capitalize'> Forgot password?</Link> </h5>
-                        </div>
-                    </form>
-            </div>
+                <div className="d-flex justify-content-between mt-3 align">
+                  <div className="checkbox">
+                    {/* <input
+                  type="checkbox"
+                  name="rememberMe"
+                  id="rememberMe"
+                  value={formik.values.rememberMe}
+                  onChange={formik.handleChange}
+                />
+                <label htmlFor="rememberMe"> Remember me</label> */}
+                  </div>
+                  <h5>
+                    {" "}
+                    <Link to="/login" className="text-capitalize">
+                      {" "}
+                      Already onboard? login
+                    </Link>{" "}
+                  </h5>
+                </div>
+              </form>
+            )}
+          </div>
         </div>
-    </section>
-  )
+      </section>
+    </Layout>
+  );
 }
 
-export default RequestDemo
+export default RequestDemo;

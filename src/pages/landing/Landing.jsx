@@ -7,19 +7,18 @@ import Foot from "../../components/pricing/Foot";
 import Contact from "../../components/contact/Contact";
 
 const Landing = () => {
-
-    return (
-        <div>
-            <Layout>
-                <Hero/>
-                 <Soft/>
-                <Works/>
-                <Pricing/>
-                {/* <FAQ/> */}
-                <Contact/>
-                <Foot/>
-            </Layout>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Layout>
+        <Hero />
+        <Soft />
+        <Works />
+        <Pricing />
+        <FAQ />
+        <Contact />
+        <Foot />
+      </Layout>
+    </div>
+  );
+};
 export default Landing;

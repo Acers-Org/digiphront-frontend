@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+.demo {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #cce2e4;
+}
+
+.demo label {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #699e98;
+  margin-bottom: 10px;
+}
+
+.demo .btn {
+  background: #ff5400;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid transparent;
+  margin-bottom: 50px;
+}
+
+.demo input {
+  height: 44px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  padding: 20px;
+}
+
+.demo input,
+.demo select {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: left;
+}
+
+.checkbox {
+  width: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.checkbox input {
+  background: #cde8e5;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.checkbox label {
+  position: relative;
+  top: 10px;
+}
+
+.checkbox label,
+.demo a {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #001618;
+  text-decoration: none;
+  padding-left: 5px;
+  margin-top: -30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.form h1 {
+  white-space: nowrap;
+  color: #699e98;
+  font-family: "Ubuntu";
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 20px;
+}
+
+.form p {
+  color: #1d1c1c;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.form .digi {
+  color: #1d1c1c;
+}
+
+.form .phront {
+  color: #ff5400;
+}
+
+.error {
+  color: red;
+  width: 100%;
+  position: relative;
+  top: -15px;
+  left: 0px;
+  text-align: left;
+}
+
+.align {
+  align-items: center;
+}
+
+@media (max-width: 940px) {
+  .form h1 {
+    font-size: 33px;
+  }
+  .sign-in-options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .form {
+    width: 100%;
+    height: 65vh;
+    margin-left: 50px;
+  }
+
+  .form label {
+    white-space: nowrap;
+  }
+  .sign-in-options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -6,7 +6,7 @@ const Contact = () => {
     <Layout>
       <div className="socials d-flex justify-content-evenly w-100">
         <div className="card">
-          <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+          <i className="fa fa-envelope-open-o" aria-hidden="true"></i>
           <h3 className="sm-name">Email</h3>
           <p className="sm-text">Contact us via email:</p>
           <a href="mailto:digiphront@gmail.com" className="sm-info">
@@ -24,7 +24,7 @@ const Contact = () => {
           </a>
         </div>
         <div className="card">
-          <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+          <i className="fa fa-connectdevelop" aria-hidden="true"></i>
           <h3 className="sm-name">Socials</h3>
           <p className="sm-text">Connect with us via</p>
           <div className="sm-info d-flex justify-content-between">
