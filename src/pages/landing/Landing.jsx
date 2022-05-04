@@ -4,10 +4,12 @@ import Works from "../../components/works/Works";
 import FAQ from "../../components/pricing/FAQ";
 import Foot from "../../components/pricing/Foot";
 import Contact from "../../components/contact/Contact";
+import Layout from "../../layout/Layout";
 
 const Landing = () => {
   return (
     <div>
+      <Layout>
         <Hero />
         <Soft />
         <Works />
@@ -15,6 +17,7 @@ const Landing = () => {
         <FAQ />
         <Contact />
         <Foot />
+      </Layout>
     </div>
   );
 };

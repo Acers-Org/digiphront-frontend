@@ -6,7 +6,6 @@ import AppState from "./store/AppState";
 
 //Components
 import ProtectedRoute from "./components/ProtectedRoute";
-import Layout from './layout/Layout'
 
 //Pages
 import Landing from "./pages/landing/Landing";
@@ -18,23 +17,22 @@ import TeacherDashboard from "./pages/teacherDashboard/Teacher";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NoMatch from "./pages/noMatch/404";
 import About from "./pages/about/About";
-import FAQ from "./components/pricing/FAQ";
-import Contact from "./components/contact/Contact";
 import Pricing from "./pages/pricing/Pricing";
 import RequestDemo from "./pages/requestDemo/RequestDemo";
 import TeacherClasses from "./pages/teacherDashboard/Classes";
+import ContactPage from "./pages/contact/Contact";
+import FaqPage from "./pages/Faq";
 
 function App() {
   return (
     <div className="App">
       <AppState>
-        <Layout>
-          <Routes>
+        <Routes>
             <Route exact path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/request" element={<RequestDemo />} />
             <Route path="/teacher_signup" element={<TeacherSignup />} />
@@ -72,8 +70,7 @@ function App() {
               }
             />
             <Route path="*" element={<NoMatch />} />
-          </Routes>
-        </Layout>
+        </Routes>
       </AppState>
     </div>
   );
