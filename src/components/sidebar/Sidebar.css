@@ -1,58 +1,58 @@
 :root {
-    --background: #E6F3F2;
-    --color: #FF7633;
-}
-* {
-    box-sizing: border-box;
+  --background: #e6f3f2;
+  --color: #ff7633;
 }
 
 .sidebar {
-    width: 250px;
-    background-color: var(--background);
-    height:200vh;
-    position: fixed;
-    left: 0;
-    top: 0;
+  width: 200px;
+  background-color: var(--background);
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .sidebar .list-item {
-    padding: 10px;
-    list-style-type: none;
-    color: #000000;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    cursor: pointer;
-    text-align: left;
-    margin-top: 12px;
+  padding: 10px;
+  list-style-type: none;
+  color: #000000;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 12px;
 }
 
 .list-item a {
-    text-decoration: none;
-    color: #000000;
-}
-.list {
-    height: calc(100vh - 100px);
-    margin-left: 20px;
-    position: relative;
-    top: -30px;
-}
-.sidebar .list-item:nth-child(1) {
-    color: var(--color);
-}
-.list-item.item {
-    padding: 5px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.sidebar #active {
-    color: var(--color);
-    font-size: 20px;
+.list {
+  min-height: calc(100vh - 100px);
+  margin-left: 20px;
+  position: relative;
+  top: -30px;
+}
+
+/* .sidebar .list-item:nth-child(1) {
+  color: var(--color);
+} */
+
+.list-item.item {
+  padding: 5px;
+}
+
+.list-item.item.active {
+  color: var(--color);
+  font-size: 20px;
 }
 
 .sidebar img {
-    margin-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
