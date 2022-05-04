@@ -3,10 +3,11 @@ import AboutImg from "../../assets/about-img.png";
 import "./About.css";
 import "../../components/contact/Contact.css";
 import Contact from "../../components/contact/Contact";
+import Layout from "../../layout/Layout";
 
 function About() {
   return (
-    <>
+    <Layout>
       <section className="about">
         <div className="container">
           <div className="row">
@@ -89,8 +90,8 @@ function About() {
           </div>
         </div>
       </section>
-      <Contact/>
-    </>
+      <Contact />
+    </Layout>
   );
 }
 

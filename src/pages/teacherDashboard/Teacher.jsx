@@ -1,3 +1,4 @@
+import DashboardLayout from "../../layout/DashboardLayout";
 import styles from "./Teacher.module.scss";
 // import ReactPlayer from "react-player";
 import "./Teacher.css";
@@ -7,17 +8,19 @@ import SemesterProgress from "../../components/teacher/dashboard/SemesterProgres
 
 const TeacherDashboard = () => {
   return (
-    <div className={styles.teacher}>
-      <div className="row my-3">
-        <div className="col-md-8">
-          <Studentperformancenotice />
-          <Submittedtests />
-        </div>
-        <div className="col-md-4">
-          <SemesterProgress />
+    <DashboardLayout>
+      <div className={styles.teacher}>
+        <div className="row my-3">
+          <div className="col-md-8">
+            <Studentperformancenotice />
+            <Submittedtests />
+          </div>
+          <div className="col-md-4">
+            <SemesterProgress />
+          </div>
         </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 

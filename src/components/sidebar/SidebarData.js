@@ -39,7 +39,7 @@ export const TeacherSideBar = [
     link: "/teacher_dashboard",
   },
   {
-    title: "My Classes",
+    title: "Live Class",
     link: "/teacher_classes",
   },
   {
