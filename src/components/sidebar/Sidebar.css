@@ -23,7 +23,6 @@
   line-height: 30px;
   cursor: pointer;
   text-align: left;
-  margin-top: 12px;
 }
 
 .list-item a {
@@ -31,7 +30,7 @@
   color: inherit;
 }
 
-.list {
+.sidebar-list {
   min-height: calc(100vh - 100px);
   margin-left: 20px;
   position: relative;

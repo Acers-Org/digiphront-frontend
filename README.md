@@ -1,15 +1,16 @@
 # DigiPhront Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows A-level schools to provided learning services to students and manage their data. A demo of the project can be seen in https://digiphront-app.vercel.app/login. DIGIPHRONT is an all-in-one learning and management system platform that allows schools to effectively provide learning services and also manage the data of their students thus enabling them to increase their reach and reduce the stress and workload that comes with managing students data and information.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the frontend for DigiPhront- an edutech solution that allows A-level schools to provided learning services to students and manage their data. A demo of the project can be seen in https://digiphront-app.vercel.app/. DIGIPHRONT is an all-in-one learning and management system platform that allows schools to effectively provide learning services and also manage the data of their students thus enabling them to increase their reach and reduce the stress and workload that comes with managing students data and information.
 
 ## Table of Content
-* [Available Scripts](#available-scripts)
-* [Motivation](#motivation)
-* [Credits](#credits)
+
+- [Available Scripts](#available-scripts)
+- [Motivation](#motivation)
+- [Credits](#credits)
 
 ## Motivation
 
-This project was conceive as part of the African Women Innovation Hackathon by AngelHack in 2022. 
+This project was conceive as part of the African Women Innovation Hackathon by AngelHack in 2022.
 
 ## Available Scripts
 
@@ -48,11 +49,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-
 ## Credits
 
 This project is possible as a result of the collaborative work of the members list below:
-* Remilekun  Odegbami
-* Damilola Davids
-* Kotoye Gbemisola
-* Evelyn Anyebe
+
+- Remilekun Odegbami
+- Damilola Davids
+- Kotoye Gbemisola
+- Evelyn Anyebe

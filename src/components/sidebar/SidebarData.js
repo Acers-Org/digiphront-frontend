@@ -40,7 +40,7 @@ export const TeacherSideBar = [
   },
   {
     title: "My Classes",
-    link: "/myclasses",
+    link: "/teacher_classes",
   },
   {
     title: "Inbox",
