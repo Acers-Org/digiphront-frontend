@@ -1,10 +1,8 @@
 import "./Contact.css";
-import Layout from "../../layout/Layout";
 
 const Contact = () => {
   return (
-    <Layout>
-      <div className="socials d-flex justify-content-evenly w-100">
+    <div className="socials d-flex justify-content-evenly w-100">
         <div className="card">
           <i className="fa fa-envelope-open-o" aria-hidden="true"></i>
           <h3 className="sm-name">Email</h3>
@@ -42,8 +40,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-      </div>
-    </Layout>
+    </div>
   );
 };
 export default Contact;

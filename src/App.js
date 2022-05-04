@@ -6,6 +6,7 @@ import AppState from "./store/AppState";
 
 //Components
 import ProtectedRoute from "./components/ProtectedRoute";
+import Layout from './layout/Layout'
 
 //Pages
 import Landing from "./pages/landing/Landing";
@@ -27,50 +28,52 @@ function App() {
   return (
     <div className="App">
       <AppState>
-        <Routes>
-          <Route exact path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/request" element={<RequestDemo />} />
-          <Route path="/teacher_signup" element={<TeacherSignup />} />
-          <Route path="/student_signup" element={<StudentSignup />} />
-          <Route
-            path="/student_dashboard"
-            element={
-              <ProtectedRoute>
-                <StudentDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/teacher_dashboard"
-            element={
-              <ProtectedRoute>
-                <TeacherDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/admin_dashboard"
-            element={
-              <ProtectedRoute>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/teacher_classes"
-            element={
-              <ProtectedRoute>
-                <TeacherClasses />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route exact path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/request" element={<RequestDemo />} />
+            <Route path="/teacher_signup" element={<TeacherSignup />} />
+            <Route path="/student_signup" element={<StudentSignup />} />
+            <Route
+              path="/student_dashboard"
+              element={
+                <ProtectedRoute>
+                  <StudentDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teacher_dashboard"
+              element={
+                <ProtectedRoute>
+                  <TeacherDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin_dashboard"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teacher_classes"
+              element={
+                <ProtectedRoute>
+                  <TeacherClasses />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+        </Layout>
       </AppState>
     </div>
   );

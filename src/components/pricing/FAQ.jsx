@@ -5,7 +5,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
-import Layout from "../../layout/Layout";
 
 const FAQ = () => {
   const [expanded, setExpanded] = useState(false);
@@ -15,8 +14,7 @@ const FAQ = () => {
   };
 
   return (
-    <Layout>
-      <div className={styles.faq}>
+    <div className={styles.faq}>
         <h1>Frequently Asked Questions</h1>
         <div className={styles.faq__wrapper}>
           <Accordion
@@ -122,8 +120,7 @@ const FAQ = () => {
             </AccordionDetails>
           </Accordion>
         </div>
-      </div>
-    </Layout>
+    </div>
   );
 };
 export default FAQ;
