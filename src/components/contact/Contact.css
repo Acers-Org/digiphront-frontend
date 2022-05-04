@@ -2,6 +2,7 @@
   background-color: #edf6f9;
   margin-bottom: 20px;
   padding: 100px 0;
+  height: calc(100vh- 80px);
 }
 
 .socials .card {
