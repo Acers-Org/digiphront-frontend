@@ -6,7 +6,7 @@ import AppState from "./store/AppState";
 
 //Components
 import ProtectedRoute from "./components/ProtectedRoute";
-import Layout from './layout/Layout'
+import Layout from "./layout/Layout";
 
 //Pages
 import Landing from "./pages/landing/Landing";

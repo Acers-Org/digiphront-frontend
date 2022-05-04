@@ -1,7 +1,7 @@
 export const SidebarData = [
   {
     title: "Dashboard",
-    link: "/dashboard",
+    link: "/student_dashboard",
   },
   {
     title: "My Classes",
