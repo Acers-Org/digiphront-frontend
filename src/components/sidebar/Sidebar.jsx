@@ -7,7 +7,6 @@ import { Link, useLocation } from "react-router-dom";
 
 function Sidebar() {
   let location = useLocation();
-  console.log(location.pathname);
   const {
     user: { user },
     logout,
