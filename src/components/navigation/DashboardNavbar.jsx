@@ -9,7 +9,38 @@ const DashboardNavbar = () => {
   return (
     <nav className={styles.dashboardnav}>
       {user?.teacher.isTeacher ? (
-        <></>
+        <>
+          <h1>Hi, {user.firstname + " " + user.lastname}</h1>
+          <ul className={styles.dashboardnav__navbar}>
+            <li className={styles.dashboardnav__navbar__link}>
+              <NavLink to="/">
+                {" "}
+                <i
+                  className={`fa fa-bell ${styles.dashboardnav__navbar__link__notificationicon}`}
+                ></i>
+                <span
+                  className={styles.dashboardnav__navbar__link__notifications}
+                >
+                  5
+                </span>
+              </NavLink>
+            </li>
+            <li className={styles.dashboardnav__navbar__link}>
+              <NavLink to="/">
+                <span>
+                  <strong>{user.firstname + " " + user.lastname}</strong>
+                  <br />
+                  Teacher
+                </span>
+                <img
+                  src="https://images.pexels.com/photos/6325984/pexels-photo-6325984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="user"
+                  className={`${styles.dashboardnav__navbar__link__usericon}`}
+                ></img>{" "}
+              </NavLink>
+            </li>
+          </ul>
+        </>
       ) : user?.student.isStudent ? (
         <></>
       ) : user?.admin.isAdmin ? (

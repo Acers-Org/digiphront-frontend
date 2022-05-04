@@ -48,9 +48,19 @@
   justify-content: space-between;
   background: #fff;
   padding: 15px 15px;
-  // -webkit-box-shadow: 0 4px 6px -6px #222;
-  // -moz-box-shadow: 0 4px 6px -6px #222;
-  // box-shadow: 0 4px 6px -6px #222;
+
+  h1 {
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 3rem;
+    text-align: center;
+    color: #001618;
+  }
 
   &__search {
     display: -ms-flexbox; /* IE10 */

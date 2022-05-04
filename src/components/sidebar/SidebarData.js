@@ -36,16 +36,17 @@ export const SidebarData = [
 export const TeacherSideBar = [
   {
     title: "Dashboard",
-    link: "/dashboard",
-  },
-  {
-    title: "Inbox",
-    link: "/inbox",
+    link: "/teacher_dashboard",
   },
   {
     title: "My Classes",
     link: "/myclasses",
   },
+  {
+    title: "Inbox",
+    link: "/inbox",
+  },
+
   {
     title: "Groups",
     link: "/groups",

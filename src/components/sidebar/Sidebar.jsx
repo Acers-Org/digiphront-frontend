@@ -32,7 +32,12 @@ function Sidebar() {
         {user?.teacher.isTeacher
           ? TeacherSideBar.map((val, key) => {
               return (
-                <li className={`list-item item`} key={key}>
+                <li
+                  className={`list-item item ${
+                    location.pathname === val.link ? "active" : ""
+                  }`}
+                  key={key}
+                >
                   <Link
                     className={`${
                       location.pathname === val.link ? "active" : ""
