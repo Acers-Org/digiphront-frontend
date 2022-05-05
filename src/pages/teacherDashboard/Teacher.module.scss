@@ -6,133 +6,375 @@ $boxShadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
   min-height: 100vh;
   padding: 20px;
   background-color: $background;
-}
 
-.performanceCard {
-  width: 100%;
-  height: 97px;
-  background: #e4e6e6;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-
-  p {
-    font-family: "Ubuntu";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    color: #4f7672;
-  }
-}
-
-.submittedcard {
-  width: 100%;
-  height: 288px;
-  margin-top: 20px;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
-  border-radius: 27px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-
-  nav {
-    display: flex;
+  .performanceCard {
     width: 100%;
-    align-content: center;
+    height: 97px;
+    background: #e4e6e6;
+    border-radius: 18px;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 20px;
 
-    h4 {
+    p {
       font-family: "Ubuntu";
       font-style: normal;
       font-weight: 400;
-      font-size: 32px;
+      font-size: 18px;
       line-height: 30px;
-      color: #001618;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    ul li {
-      font-family: "Ubuntu";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 30px;
-      color: #666;
+      color: #4f7672;
     }
   }
 
-  &__tablehead {
-    background: rgba(196, 196, 196, 0.5);
-  }
-
-  &__usericon {
-    border: none;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-  }
-
-  &__status {
-    width: 76px;
-    height: 25px;
-    background: #cce2e4;
-    border-radius: 100px;
-    padding: 5px 10px;
-
-    font-family: "Ubuntu";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-    color: #66a7ad;
-  }
-}
-
-.semesterProgress {
-  width: 280px;
-  height: 200px;
-  background: #edf6f9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 11px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-
-  h4 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    color: #000000;
-    margin: 5px;
-  }
-
-  &__card {
-    width: 220px;
-    height: 59px;
-    border-radius: 6px;
-    align-items: center;
+  .submittedcard {
+    width: 100%;
+    height: 288px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 27px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    margin: 5px;
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 30px;
+        color: #001618;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: #666;
+      }
+    }
+
+    &__tablehead {
+      background: rgba(196, 196, 196, 0.5);
+    }
+
+    &__usericon {
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+
+    &__status {
+      width: 76px;
+      height: 25px;
+      background: #cce2e4;
+      border-radius: 100px;
+      padding: 5px 10px;
+
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: #66a7ad;
+    }
   }
 
-  &__green {
-    background-color: #99c5c9;
+  .semesterProgress {
+    margin: 10px auto;
+    width: 80%;
+    height: 200px;
+    background: #edf6f9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+
+    h4 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      color: #000000;
+      margin: 5px auto;
+    }
+
+    &__card {
+      width: 220px;
+      height: 59px;
+      border-radius: 6px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 5px auto;
+    }
+
+    &__green {
+      background-color: #99c5c9;
+    }
+
+    &__white {
+      background-color: #fff;
+    }
   }
 
-  &__white {
-    background-color: #fff;
+  &__inbox {
+    margin: 10px auto;
+    width: 80%;
+    min-height: 301px;
+    padding-bottom: 10px;
+    background: #edf6f9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      padding: 10px;
+
+      &__title {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #001618;
+      }
+
+      &__icon {
+        color: #001618;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__message {
+      margin: 10px auto;
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 90%;
+      padding: 10px 5px;
+      background: #ffffff;
+      border-radius: 6px;
+
+      &__usericon {
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+      }
+
+      &__userstatus {
+        display: block;
+        margin-top: 1px;
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: #99c5c9;
+      }
+
+      &__user {
+        display: inline-block;
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000000;
+        margin-left: 7px;
+
+        &__time {
+          display: inline-block;
+          margin-left: auto;
+          font-size: 13px;
+        }
+      }
+
+      &__textbox {
+        margin-left: 2px;
+        padding: 2px;
+        display: flex;
+        &__text {
+          font-family: "Ubuntu";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .topstudent {
+    width: 100%;
+    min-height: 288px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 27px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        color: #001618;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #666;
+      }
+    }
+
+    &__listbox {
+      display: flex;
+      align-items: center;
+      height: 83px;
+      background: #e4e6e6;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      position: relative;
+
+      &__usericon {
+        position: absolute;
+        border: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+      }
+
+      &__student {
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        margin-left: 65px;
+        width: 100%;
+
+        &__scorewrapper {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .groups {
+    width: 100%;
+    min-height: 288px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 27px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        color: #001618;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #666;
+      }
+    }
+
+    &__listbox {
+      display: flex;
+      align-items: center;
+      height: 83px;
+      background: #e4e6e6;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      position: relative;
+
+      &__usericon {
+        position: absolute;
+        border: none;
+        width: 60px;
+        height: 60px;
+      }
+
+      &__student {
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        margin-left: 65px;
+        width: 100%;
+
+        &__activity {
+          display: block;
+          margin-top: 8px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
 

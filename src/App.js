@@ -22,6 +22,7 @@ import RequestDemo from "./pages/requestDemo/RequestDemo";
 import TeacherClasses from "./pages/teacherDashboard/Classes";
 import ContactPage from "./pages/contact/Contact";
 import FaqPage from "./pages/Faq";
+import Myclasses from "./pages/studentDashboard/MyClasses";
 
 function App() {
   return (
@@ -66,6 +67,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <TeacherClasses />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/myclasses"
+            element={
+              <ProtectedRoute>
+                <Myclasses />
               </ProtectedRoute>
             }
           />

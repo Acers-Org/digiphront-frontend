@@ -1,0 +1,236 @@
+$background: #ffffff;
+$boxShadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+
+.student {
+  margin: 5px auto;
+  min-height: 100vh;
+  padding: 0px 20px 20px 20px;
+  background-color: $background;
+
+  &__video {
+    width: 100%;
+
+    &__player {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+    }
+
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      margin: 10px auto;
+
+      &__title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #000000;
+      }
+
+      &__share {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+        border-radius: 9px;
+        border: 2px solid transparent;
+        padding: 7px 12px;
+        white-space: nowrap;
+
+        i {
+          color: #24c246;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.sidechat {
+  min-height: 100vh;
+  background: #f4f7fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px auto;
+  padding: 10px 20px;
+  position: relative;
+
+  &__search {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 9px;
+    width: 100%;
+    height: 55px;
+    padding: 10px 5px;
+
+    &__input {
+      width: 100%;
+      outline: none;
+      border: none;
+    }
+
+    &__icon {
+      font-size: 30px;
+      color: #094449;
+      text-align: center;
+      margin-left: -40px;
+      margin-top: 4px;
+      border: none;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+
+  &__feed {
+    margin-top: 20px;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 9px;
+    width: 100%;
+    height: 74px;
+    padding: 10px 5px;
+
+    &__message {
+      width: 45%;
+      height: 55px;
+      background: #006d77;
+      box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+      border-radius: 9px;
+      color: #ffffff;
+      font-weight: 400;
+      margin-left: auto;
+    }
+
+    &__participant {
+      width: 45%;
+      height: 39px;
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      color: #000000;
+      border: none;
+      background-color: #ffffff;
+      margin-right: auto;
+      padding-left: 5px;
+    }
+  }
+
+  &__left {
+    margin-right: auto;
+  }
+
+  &__right {
+    margin-left: auto;
+    flex-direction: row-reverse;
+  }
+
+  &__chat {
+    margin-top: 20px;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 10px 5px;
+
+    &__message {
+      width: 60%;
+      height: auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 10px;
+      margin: auto 10px;
+    }
+
+    &__usericon {
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+    }
+
+    &__ellipsis {
+      display: inline-block;
+      padding-left: 10px;
+      margin-left: auto;
+      font-size: 18px;
+    }
+  }
+
+  &__chatbox {
+    position: absolute;
+    margin: 10px auto;
+    width: 90%;
+    height: 74px;
+    bottom: 5px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+
+    &__input {
+      width: 100%;
+      outline: none;
+      border: none;
+      background: transparent;
+      z-index: 2;
+    }
+
+    &__iconswrapper {
+      position: absolute;
+      right: 5px;
+      height: 100%;
+      margin: auto;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        color: rgba(0, 0, 0, 0.38);
+        font-weight: 700;
+        margin: auto;
+        display: inline-block;
+        width: 18px;
+        height: 19px;
+      }
+
+      &__sendbtn {
+        width: 45px;
+        height: 45px;
+        background-color: #006d77;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px 3px rgba(229, 229, 229, 0.5);
+        border-radius: 9px;
+      }
+    }
+  }
+}

@@ -77,7 +77,7 @@ function RequestDemo() {
                 </h1>
                 <p>
                   Fill the information below to get your school on board. Our
-                  team will contact you with 48th hours for the next steps.
+                  team will contact you within 48th hours for the next steps.
                   Thank you!
                 </p>
 
