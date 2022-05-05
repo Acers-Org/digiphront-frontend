@@ -84,14 +84,15 @@ function Login() {
         </div>
         <div className="col-md-5 col-sm-12 m-auto">
           <div className="mb-2">
-            <Link to="/">
+            {/* <Link to="/">
               <button
                 className="btn text-uppercase btn-block btn-primary mt-3"
                 type="text"
               >
-                <i className="fa fa-arrow-left" aria-hidden="true"></i>
+                <i className="fa fa-arrow-left" aria-hidden="true"></i>{" "}
+                Digiphront
               </button>
-            </Link>
+            </Link> */}
             {messages && <Messages messages={messages} />}
           </div>
           <form action="" className="form w-75" onSubmit={formik.handleSubmit}>

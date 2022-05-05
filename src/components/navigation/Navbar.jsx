@@ -24,9 +24,6 @@ const Navbar = () => {
           <li className={styles.wrapper__navbar__links__link}>
             <NavLink to="/contact">Contact us</NavLink>
           </li>
-          <li className={styles.wrapper__navbar__links__link}>
-            <NavLink to="/login">Login</NavLink>
-          </li>
           <li>
             <button className={style.wrap__cta__menuBtn}>
               <Link to="/request">Request a Demo</Link>
